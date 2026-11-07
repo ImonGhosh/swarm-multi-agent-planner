@@ -46,6 +46,25 @@ One run with the official evaluator: `.\.venv\Scripts\python.exe scripts\evaluat
 .\.venv\Scripts\python.exe scripts\run_sampling_control.py --seed 2 --task_concurrency 4 --max_concurrent_requests 32 --max_cost_usd 3.5
 ```
 
+## Cost estimate (3 modes × 3 seeds)
+
+Prices (DeepInfra via OpenRouter): $0.05 per million input tokens, $0.10 per million output tokens. The numbers below are **estimates extrapolated from the 20 dev tasks**, so a real run can differ by some tens of percent.
+
+| Mode | Runs | Estimated cost |
+|---|---|---|
+| Baseline | 3 × 400 calls | about **$0.15** in total |
+| ToT-only | 3 × 400 tasks × 48 traversals × 6 calls | about **$9** for the first fresh run; the other seeds reuse many identical calls |
+| ToT+ACO | 3 × 400 tasks × 48 traversals × 6 calls | cheaper than ToT-only, because most of its LLM calls are already cached |
+| **All six ToT runs together** | | about **$25** (the cache is shared, so the sum is far below 6 × $9 = $54) |
+| **Total, three required modes** | 9 runs | about **$25** (plausible range $20–32) |
+| Optional smoke test | 2 dev tasks | about $0.02 |
+| Optional sampling control | 3 × 19,200 calls | about $6 more |
+
+- **Hard caps** (`--max_cost_usd`): a run stops once it has paid 12 dollars (ToT) or 0.5 dollars (baseline). The cap applies *per run*, so the theoretical maximum is higher than the estimate, but each cap is well above the expected cost of its run (about $9 for a fresh ToT run, about $0.05 for a baseline seed).
+- **Cache hits are free.** Re-running a command after a stop costs almost nothing, so an interrupted run does not pay twice.
+- **Check what you actually spent:** the progress line shows `paid $x/$cap` while a run is going. At the end, `results\runs\<config>\seed_<s>\summary.json` has `llm.cost_usd_paid` (paid) and `llm.cost_usd_uncached_equivalent` (what it would have cost without the cache).
+- **Order matters for who pays:** whichever ToT run goes first pays for the shared calls, so ToT-only seed 0 is the most expensive run and the later ones are cheaper. This is why the step order is baseline, ToT-only, then ToT+ACO.
+
 ## Where the results go
 
 ```
