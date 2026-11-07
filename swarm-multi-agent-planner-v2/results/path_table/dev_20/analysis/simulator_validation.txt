@@ -1,0 +1,15 @@
+
+Solvable tasks: 10; 30 real seeds per setting; selection = best of the last iteration.
+task  category  p(path) | ToT-only real  sim | ACO v1 real  sim
+ _40     3p1d   0.160 |        0.73  0.74 |        0.90  0.88
+ 140     4p1d   0.078 |        0.33  0.51 |        0.63  0.64
+ 240     5p1d   0.593 |        1.00  1.00 |        1.00  1.00
+ 540     2p1d   0.658 |        1.00  1.00 |        1.00  1.00
+ 640     2p2d   0.029 |        0.33  0.21 |        0.00  0.06
+ 241     5p1d   0.189 |        0.83  0.82 |        0.73  0.69
+ 341     6p1d   0.173 |        0.70  0.78 |        0.73  0.65
+ 441     7p1d   0.218 |        0.83  0.85 |        0.80  0.84
+ 541     2p1d   0.292 |        0.90  0.94 |        0.97  0.96
+ 641     2p2d   0.218 |        0.87  0.85 |        1.00  0.98
+ToT-only: real 0.753 vs simulated 0.769 (difference -0.016, approx. SE 0.021); per-task correlation 0.953
+ACO v1: real 0.777 vs simulated 0.770 (difference +0.006, approx. SE 0.017); per-task correlation 0.991

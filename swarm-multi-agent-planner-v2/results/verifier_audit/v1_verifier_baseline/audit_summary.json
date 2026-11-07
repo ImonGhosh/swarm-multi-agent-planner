@@ -1,0 +1,67 @@
+{
+  "tasks": 1000,
+  "parse_failures": 0,
+  "tasks_with_warnings": 0,
+  "gold_hard_valid": 1000,
+  "gold_score_1": 965,
+  "gold_in_top": 997,
+  "gold_unique_top": 754,
+  "multi_top_tasks": 243,
+  "solver_correct": 860,
+  "verifier_as_solver_accuracy": 0.86,
+  "gold_recall_hard_valid": 1.0,
+  "hard_valid_slots_total": 4673,
+  "hard_valid_non_gold_slots_total": 3673,
+  "per_category": {
+    "2p_1d": {
+      "tasks": 100,
+      "gold_unique_top": 67,
+      "solver_correct": 83
+    },
+    "2p_2d": {
+      "tasks": 100,
+      "gold_unique_top": 66,
+      "solver_correct": 80
+    },
+    "2p_3d": {
+      "tasks": 100,
+      "gold_unique_top": 64,
+      "solver_correct": 76
+    },
+    "2p_4d": {
+      "tasks": 100,
+      "gold_unique_top": 60,
+      "solver_correct": 75
+    },
+    "2p_5d": {
+      "tasks": 100,
+      "gold_unique_top": 64,
+      "solver_correct": 76
+    },
+    "3p_1d": {
+      "tasks": 100,
+      "gold_unique_top": 65,
+      "solver_correct": 87
+    },
+    "4p_1d": {
+      "tasks": 100,
+      "gold_unique_top": 94,
+      "solver_correct": 98
+    },
+    "5p_1d": {
+      "tasks": 100,
+      "gold_unique_top": 82,
+      "solver_correct": 89
+    },
+    "6p_1d": {
+      "tasks": 100,
+      "gold_unique_top": 98,
+      "solver_correct": 100
+    },
+    "7p_1d": {
+      "tasks": 100,
+      "gold_unique_top": 94,
+      "solver_correct": 96
+    }
+  }
+}

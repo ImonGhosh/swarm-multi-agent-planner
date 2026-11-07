@@ -1,0 +1,94 @@
+=== 1. Integrity ===
+tasks 20, path rows 4860, node rows 12120, llm_call events 12120
+paths per task [243], distinct requests per task [606]
+correct implies score 1.0 and hard-valid: True
+task_error events: 0; providers of paid calls: {'DeepInfra': 10908}
+finish reasons: {'stop': 12069, 'length': 51} (0.42% stopped at max_tokens)
+categories: {'2p1d': 2, '2p2d': 2, '2p3d': 2, '2p4d': 2, '2p5d': 2, '3p1d': 2, '4p1d': 2, '5p1d': 2, '6p1d': 2, '7p1d': 2}
+
+=== 2. Task groups (243 paths per task) ===
+task  category  correct  hard-valid  score-1.0  distinct answers
+ _40     3p1d     39/243       39         39   13
+ 140     4p1d     19/243       19         19   7
+ 240     5p1d    144/243      144        144   8
+ 340     6p1d      0/243        0          0   12
+ 440     7p1d      0/243        0          0   7
+ 540     2p1d    160/243      160        160   7
+ 640     2p2d      7/243       19          7   13
+ 740     2p3d      0/243       15          0   11
+ 840     2p4d      0/243        0          0   18
+ 940     2p5d      0/243        0          0   8
+ _41     3p1d      0/243        1          1   7
+ 141     4p1d      0/243        0          0   6
+ 241     5p1d     46/243       46         46   8
+ 341     6p1d     42/243       42         42   13
+ 441     7p1d     53/243       53         53   9
+ 541     2p1d     71/243       71         71   12
+ 641     2p2d     53/243      188         53   9
+ 741     2p3d      0/243      118          0   22
+ 841     2p4d      0/243        0          0   12
+ 941     2p5d      0/243        0          0   8
+tasks with no correct path: 10, every path correct: 0, some correct: 10
+mean path accuracy 0.130 (median 0.014); pooled 634/4860
+failure mode of the tasks with no correct path:
+   340   6p1d: no path produces even a hard-valid answer
+   440   7p1d: no path produces even a hard-valid answer
+   740   2p3d: 15 paths are hard-valid but violate a preference or the earliest rule
+   840   2p4d: no path produces even a hard-valid answer
+   940   2p5d: no path produces even a hard-valid answer
+   _41   3p1d: a path scores 1.0 but is not the gold answer (several valid answers, F11)
+   141   4p1d: no path produces even a hard-valid answer
+   741   2p3d: 118 paths are hard-valid but violate a preference or the earliest rule
+   841   2p4d: no path produces even a hard-valid answer
+   941   2p5d: no path produces even a hard-valid answer
+path accuracy by category (two tasks each): 3p1d ['0.16', '0.00']; 4p1d ['0.08', '0.00']; 5p1d ['0.59', '0.19']; 6p1d ['0.00', '0.17']; 7p1d ['0.00', '0.22']; 2p1d ['0.66', '0.29']; 2p2d ['0.03', '0.22']; 2p3d ['0.00', '0.00']; 2p4d ['0.00', '0.00']; 2p5d ['0.00', '0.00']
+
+=== 3. Level and branch effects ===
+overall task-averaged path accuracy 0.130; branch accuracy and its difference from the level mean (points, 95% interval over tasks; * = interval excludes 0)
+  L1 constraint_first             acc 0.196  diff  +6.6 [ +0.9, +13.0] *
+  L1 people_first                 acc 0.110  diff  -2.1 [ -6.9,  +2.0] 
+  L1 preference_first             acc 0.085  diff  -4.5 [ -8.0,  -1.6] *
+  L2 participant_wise             acc 0.146  diff  +1.5 [ -0.4,  +3.7] 
+  L2 day_wise                     acc 0.120  diff  -1.1 [ -4.8,  +2.7] 
+  L2 mixed_normalization          acc 0.126  diff  -0.5 [ -4.3,  +3.4] 
+  L3 free_slot_computation        acc 0.127  diff  -0.3 [ -2.3,  +1.4] 
+  L3 candidate_slot_enumeration   acc 0.139  diff  +0.8 [ -1.6,  +3.5] 
+  L3 progressive_elimination      acc 0.125  diff  -0.5 [ -2.8,  +2.0] 
+  L4 earliest_valid               acc 0.125  diff  -0.5 [ -1.9,  +0.9] 
+  L4 preference_priority          acc 0.127  diff  -0.3 [ -1.2,  +0.5] 
+  L4 conservative_selection       acc 0.139  diff  +0.8 [ -0.3,  +2.1] 
+  L5 direct_output                acc 0.132  diff  +0.2 [ -1.0,  +1.6] 
+  L5 one_step_self_check          acc 0.135  diff  +0.4 [ -0.2,  +1.2] 
+  L5 format_check_output          acc 0.125  diff  -0.6 [ -1.6,  +0.2] 
+permutation test (branch labels shuffled within each task, 2000 times):
+  L1: spread 0.111, chance 95th percentile 0.023, p = 0.000
+  L2: spread 0.026, chance 95th percentile 0.023, p = 0.022
+  L3: spread 0.014, chance 95th percentile 0.023, p = 0.327
+  L4: spread 0.014, chance 95th percentile 0.023, p = 0.341
+  L5: spread 0.010, chance 95th percentile 0.023, p = 0.578
+
+variance of 'correct': share explained by the task alone / by the branch labels within a task
+  task alone explains 32% of the variance
+  main effects of the 5 levels: within-task R^2 = 0.311 (tasks with some correct path; descriptive, 25 parameters)
+  main effects + level-1 x level-2: within-task R^2 = 0.427 (tasks with some correct path; descriptive, 25 parameters)
+
+=== 4. Heuristic eta (tau = 1, beta = 2, as at the start of an ACO run) ===
+accuracy of one agent: uniform 13.05%, eta-guided 12.86% (difference -0.18 [-1.12, +0.79] points)
+  L1: accuracy change from eta at this level -0.91 points; in the 10 tasks where branches differ, eta's favourite is the best branch in 10% and the worst in 70%
+  L2: accuracy change from eta at this level +0.39 points; in the 10 tasks where branches differ, eta's favourite is the best branch in 30% and the worst in 10%
+  L3: accuracy change from eta at this level +0.20 points; in the 10 tasks where branches differ, eta's favourite is the best branch in 50% and the worst in 30%
+  L4: accuracy change from eta at this level +0.24 points; in the 9 tasks where branches differ, eta's favourite is the best branch in 56% and the worst in 33%
+  L5: accuracy change from eta at this level +0.12 points; in the 9 tasks where branches differ, eta's favourite is the best branch in 44% and the worst in 22%
+
+=== 5. The intermediate answers (nodes) ===
+level   calls  repeats-the-instruction  announces-a-final-answer  states-a-slot  mean output tokens
+L1       60         6.7%                 3.3%         28.3%           102
+L2      180         6.1%                 6.1%         25.0%           133
+L3      540         0.2%                19.1%         58.5%            80
+L4     1620         0.1%                 5.2%         76.9%            34
+L5     4860         0.1%                 4.7%         86.2%            27
+slot stated at level L (paths where it states one): share equal to the final answer / to gold
+  L3: states a slot in 59% of paths; equals the final answer in 56%, equals gold in 9.2%
+  L4: states a slot in 77% of paths; equals the final answer in 75%, equals gold in 11.4%
+  L5: states a slot in 86% of paths; equals the final answer in 77%, equals gold in 11.6%
+(the finalize call is separate from level 5 and changes the slot stated at level 5 in the remaining paths)

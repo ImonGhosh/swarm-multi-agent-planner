@@ -1,0 +1,112 @@
+{
+  "tasks": 1000,
+  "classes": {
+    "unique": 834,
+    "tie_gold_is_best": 100,
+    "tie_gold_not_best": 66,
+    "gold_not_top": 0,
+    "parse_error": 0
+  },
+  "tasks_with_parser_warnings": 0,
+  "gold_score_1": 1000,
+  "hard_valid_recall": 1.0,
+  "hard_valid_precision": 0.2377,
+  "accept_recall": 1.0,
+  "accept_precision": 0.7788,
+  "tasks_with_several_top_slots": 166,
+  "verifier_as_solver_correct": 934,
+  "verifier_as_solver_accuracy": 0.934,
+  "per_category": {
+    "2p_1d": {
+      "tasks": 100,
+      "solver_correct": 87,
+      "unique": 70,
+      "tie_gold_not_best": 13,
+      "tie_gold_is_best": 17
+    },
+    "2p_2d": {
+      "tasks": 100,
+      "solver_correct": 88,
+      "unique": 74,
+      "tie_gold_is_best": 14,
+      "tie_gold_not_best": 12
+    },
+    "2p_3d": {
+      "tasks": 100,
+      "solver_correct": 93,
+      "unique": 82,
+      "tie_gold_is_best": 11,
+      "tie_gold_not_best": 7
+    },
+    "2p_4d": {
+      "tasks": 100,
+      "solver_correct": 90,
+      "tie_gold_is_best": 11,
+      "unique": 79,
+      "tie_gold_not_best": 10
+    },
+    "2p_5d": {
+      "tasks": 100,
+      "solver_correct": 96,
+      "unique": 82,
+      "tie_gold_is_best": 14,
+      "tie_gold_not_best": 4
+    },
+    "3p_1d": {
+      "tasks": 100,
+      "solver_correct": 88,
+      "unique": 66,
+      "tie_gold_not_best": 12,
+      "tie_gold_is_best": 22
+    },
+    "4p_1d": {
+      "tasks": 100,
+      "solver_correct": 99,
+      "unique": 95,
+      "tie_gold_is_best": 4,
+      "tie_gold_not_best": 1
+    },
+    "5p_1d": {
+      "tasks": 100,
+      "solver_correct": 95,
+      "unique": 90,
+      "tie_gold_is_best": 5,
+      "tie_gold_not_best": 5
+    },
+    "6p_1d": {
+      "tasks": 100,
+      "solver_correct": 100,
+      "unique": 99,
+      "tie_gold_is_best": 1
+    },
+    "7p_1d": {
+      "tasks": 100,
+      "solver_correct": 98,
+      "unique": 97,
+      "tie_gold_not_best": 2,
+      "tie_gold_is_best": 1
+    }
+  },
+  "subsets": {
+    "test_400": {
+      "tasks": 400,
+      "classes": {
+        "unique": 330,
+        "tie_gold_not_best": 29,
+        "tie_gold_is_best": 41
+      },
+      "verifier_as_solver_correct": 371,
+      "verifier_as_solver_accuracy": 0.9275
+    },
+    "dev_100": {
+      "tasks": 100,
+      "classes": {
+        "unique": 83,
+        "tie_gold_is_best": 13,
+        "tie_gold_not_best": 4
+      },
+      "verifier_as_solver_correct": 96,
+      "verifier_as_solver_accuracy": 0.96
+    }
+  }
+}

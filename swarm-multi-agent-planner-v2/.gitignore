@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+
+# LLM response cache (large; published as a release archive, see PLAN.md Phase 6)
+results/cache/
+*.sqlite-wal
+*.sqlite-shm

@@ -1,0 +1,42 @@
+{
+  "source": {
+    "file": "calendar_scheduling.json",
+    "tasks": 1000,
+    "sha256": "4a03c6558e7aff629d2bc82e5bf4a7ae0cbe05fbbaf94e00f909ae8ea30fc2ee"
+  },
+  "split_rule": "category = (num_people, num_days), in source-file order; test = first 40 per category; dev = next 10 per category",
+  "files": {
+    "curated_400.json": {
+      "tasks": 400,
+      "sha256": "24a7cfa9fbb03fff25d0da37bdb6f6ba21bebac4f26b7756dcfc6592f5fba74a",
+      "per_category": {
+        "2p_1d": 40,
+        "2p_2d": 40,
+        "2p_3d": 40,
+        "2p_4d": 40,
+        "2p_5d": 40,
+        "3p_1d": 40,
+        "4p_1d": 40,
+        "5p_1d": 40,
+        "6p_1d": 40,
+        "7p_1d": 40
+      }
+    },
+    "dev_100.json": {
+      "tasks": 100,
+      "sha256": "bd938839e73a4da1a10a7d0633ded809a7a0a4636513041f7fd18485ee9c3347",
+      "per_category": {
+        "2p_1d": 10,
+        "2p_2d": 10,
+        "2p_3d": 10,
+        "2p_4d": 10,
+        "2p_5d": 10,
+        "3p_1d": 10,
+        "4p_1d": 10,
+        "5p_1d": 10,
+        "6p_1d": 10,
+        "7p_1d": 10
+      }
+    }
+  }
+}

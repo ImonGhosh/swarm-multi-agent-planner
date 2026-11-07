@@ -1,0 +1,26 @@
+{
+  "mode": "solve",
+  "tasks": 2,
+  "agents_per_task": 8,
+  "iterations_per_task": 6,
+  "aco_enabled": true,
+  "selection_policy": "final_iteration_best",
+  "scoring_mode": "deterministic_task_based",
+  "seed": 0,
+  "pheromone_updates_applied": 12,
+  "final_mean_quality": 0.392,
+  "llm": {
+    "llm_calls": 576,
+    "cache_hits": 366,
+    "prompt_tokens": 1146501,
+    "completion_tokens": 45017,
+    "cost_usd_paid": 0.0227595,
+    "cost_usd_uncached_equivalent": 0.06182675,
+    "latency_s_paid": 453.856
+  },
+  "cache_entries": 210,
+  "wall_s": 96.076,
+  "out_path": "results\\runs\\smoke_tot_aco\\seed_0\\predictions.json",
+  "run_log_path": "results\\runs\\smoke_tot_aco\\seed_0\\events.jsonl.gz",
+  "run_dir": "results\\runs\\smoke_tot_aco\\seed_0"
+}

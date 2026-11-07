@@ -1,0 +1,48 @@
+{
+  "mode": "enumerate_paths",
+  "data_path": "C:\\IMON\\Masters\\Masters-scientific-project\\swarm-multi-agent-planner\\swarm-multi-agent-planner-v2\\data\\dev_100.json",
+  "data_sha256": "bd938839e73a4da1a10a7d0633ded809a7a0a4636513041f7fd18485ee9c3347",
+  "limit": 20,
+  "order": "interleaved",
+  "task_ids": [
+    "calendar_scheduling_example_40",
+    "calendar_scheduling_example_140",
+    "calendar_scheduling_example_240",
+    "calendar_scheduling_example_340",
+    "calendar_scheduling_example_440",
+    "calendar_scheduling_example_540",
+    "calendar_scheduling_example_640",
+    "calendar_scheduling_example_740",
+    "calendar_scheduling_example_840",
+    "calendar_scheduling_example_940",
+    "calendar_scheduling_example_41",
+    "calendar_scheduling_example_141",
+    "calendar_scheduling_example_241",
+    "calendar_scheduling_example_341",
+    "calendar_scheduling_example_441",
+    "calendar_scheduling_example_541",
+    "calendar_scheduling_example_641",
+    "calendar_scheduling_example_741",
+    "calendar_scheduling_example_841",
+    "calendar_scheduling_example_941"
+  ],
+  "tasks": 20,
+  "model": "google/gemma-3-4b-it",
+  "paths_per_task": 243,
+  "llm_calls_per_task": 606,
+  "llm_params": {
+    "temperature": 0.0,
+    "max_tokens": 400,
+    "top_p": 1.0
+  },
+  "provider_preferences": {
+    "allow_fallbacks": false,
+    "only": [
+      "DeepInfra"
+    ]
+  },
+  "cache_path": "C:\\IMON\\Masters\\Masters-scientific-project\\swarm-multi-agent-planner\\swarm-multi-agent-planner-v2\\results\\cache\\llm_cache.sqlite",
+  "task_concurrency": 4,
+  "max_concurrent_requests": 16,
+  "max_cost_usd": 15.0
+}

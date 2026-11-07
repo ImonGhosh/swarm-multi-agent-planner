@@ -1,0 +1,71 @@
+Path table: 20 tasks, 10 with at least one correct path (pass@243 = 10/20). 400 simulated searches per task and setting.
+Budget: 8 agents x 6 iterations = 48 traversals unless stated.
+Accuracy is exact match with gold, averaged over all tasks. 'last' selects the best answer of the last
+iteration (what the v1 solver does), 'all' the best answer over all iterations.
+
+=== 1. ACO variants against ToT-only (equal budget) ===
+setting                                   last   all valid(last) | difference vs ToT-only, last | all
+ToT-only (uniform)                        38.3  48.5        38.5
+ACO v1 rule (a=1, b=2, deposit=score)     38.7  46.1        38.8 |  +0.4 [ -2.8,  +3.9] |  -2.4 [ -6.6,  -0.1]
+eta only (a=0, b=2)                       37.7  47.6        37.9 |  -0.6 [ -2.5,  +1.2] |  -0.9 [ -3.0,  +0.2]
+pheromone only (a=1, b=0, v1 deposit)     42.4  48.1        42.5 |  +4.1 [ +1.7,  +6.7] |  -0.4 [ -1.1,  -0.0]
+ACO, valid-only deposit                   45.6  46.8        46.0 |  +7.3 [ +2.2, +13.1] |  -1.7 [ -5.3,  +0.2]
+ACO, top-only deposit                     46.6  47.6        47.0 |  +8.3 [ +3.1, +14.1] |  -0.9 [ -3.0,  +0.2]
+ACO, best-of-iteration deposit            45.1  46.9        45.4 |  +6.8 [ +2.2, +12.0] |  -1.7 [ -5.1,  +0.1]
+ACO, (score - mean) deposit               45.0  47.5        45.3 |  +6.7 [ +2.3, +11.8] |  -1.1 [ -3.4,  +0.2]
+pheromone only, top-only deposit          47.8  48.5        48.4 |  +9.6 [ +3.6, +15.8] |  +0.0 [ +0.0,  +0.0]
+(oracle: a task counts as solvable if any of its 243 paths is correct:  50.0%)
+
+=== 2. Accuracy against budget: 8 agents x T iterations, selection = best over all iterations ===
+traversals  ToT-only  ACO v1  ACO top-only/pher.
+         8      38.5    37.3                38.5
+        16      45.0    42.9                45.0
+        24      46.9    44.5                46.9
+        32      47.8    45.0                47.8
+        48      48.9    46.0                48.9
+
+=== 3. How the 48 traversals are split into agents x iterations ===
+   n x T | ToT-only last   all | ACO top-only/pheromone last   all
+ 48 x 1  |        48.8  48.8 |                     48.8  48.8
+ 24 x 2  |        47.2  48.8 |                     48.4  48.8
+ 12 x 4  |        42.8  48.8 |                     47.9  48.8
+  8 x 6  |        38.1  48.8 |                     48.1  48.8
+  4 x 12 |        29.4  48.8 |                     47.8  48.8
+  2 x 24 |        21.0  48.8 |                     47.8  48.8
+  1 x 48 |        13.2  48.8 |                     48.2  48.8
+
+=== 4. Early stopping after the first iteration with a verifier score-1.0 answer (ToT-only) ===
+accuracy (best over all): full budget  48.5%, early stopping  49.0% (difference  +0.4 [ +0.0,  +1.1])
+mean iterations used: 3.71 of 6 = 62% of the budget (solvable tasks 1.47, unsolvable tasks 5.95)
+
+=== 5. Does the pheromone move toward the best level-1 branch? ===
+tasks where level-1 branches differ in accuracy: 10 of 20
+ACO v1 (deposit = score)             P(best level-1 branch): iteration 1 0.292 -> iteration 6 0.295 (uniform = 0.333)
+ACO, top-only deposit                P(best level-1 branch): iteration 1 0.292 -> iteration 6 0.545 (uniform = 0.333)
+pheromone only, top-only deposit     P(best level-1 branch): iteration 1 0.333 -> iteration 6 0.666 (uniform = 0.333)
+
+=== 6. The frozen v2 method (no eta, top-only deposit) against ToT-only, full budget, no early stopping ===
+Same budget (8 x 6), the answer is the best trace over all iterations. 'verified share' = share of a
+iteration's traces that the verifier scores 1.0.
+measure                                                     ToT-only   ACO v2   ACO v2 minus ToT-only
+verified share, iteration 1                                     13.3     13.3    +0.0 [ +0.0,  +0.0]
+verified share, iteration 6                                     13.0     32.4   +19.3 [ +9.6, +29.6]
+verified share, mean over the run                               13.1     23.6   +10.5 [ +5.0, +16.3]
+accuracy, best over all iterations                              48.6     48.6    +0.0 [ +0.0,  +0.0]
+accuracy, best of the last 3 iterations                         46.6     48.3    +1.7 [ +0.1,  +3.7]
+accuracy, best of the last 2 iterations                         44.5     48.1    +3.7 [ +0.7,  +7.2]
+accuracy, best of the last iteration                            38.2     47.7    +9.4 [ +3.5, +15.8]
+accuracy, plain majority vote over the 48 traces (no verifier)      13.3     36.3   +23.0 [ +9.0, +38.0]
+accuracy, verified vote, all iterations                         48.6     48.6    +0.0 [ +0.0,  +0.0]
+accuracy, verified vote, last 3 iterations                      46.6     48.3    +1.7 [ +0.1,  +3.7]
+accuracy, verified vote, last 2 iterations                      44.5     48.1    +3.7 [ +0.7,  +7.2]
+accuracy, hard-valid vote, all iterations                       41.3     46.9    +5.6 [ +0.0, +15.3]
+accuracy, hard-valid vote, last 3 iterations                    40.8     47.6    +6.9 [ +0.3, +16.6]
+accuracy, hard-valid vote, last 2 iterations                    39.2     47.6    +8.4 [ +1.2, +18.3]
+probability of the best level-1 branch (tasks where it is defined): iteration 1 0.333 -> iteration 6 0.661 (ToT-only stays at 0.333)
+
+=== 7. Estimated cost of the Phase 4 ToT-based runs (full budget, shared cache) ===
+average cost of all 606 requests of a task (every path): $0.0860
+one full-budget ToT-only run: $0.0223 per task, $8.9 for 400 tasks
+six runs sharing the cache (3 ToT-only seeds + 3 ACO v2 seeds): $0.0629 per task, $25.2 for 400 tasks
+(extrapolated from the 20 dev tasks, which have the same category mix as the test set)

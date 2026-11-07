@@ -1,0 +1,464 @@
+[
+  {
+    "task_id": "calendar_scheduling_example_1",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 4,
+    "gold": "Monday, 14:30 - 15:00",
+    "verifier_best": "Monday, 9:30 - 10:00"
+  },
+  {
+    "task_id": "calendar_scheduling_example_5",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 4,
+    "gold": "Monday, 12:30 - 13:00",
+    "verifier_best": "Monday, 10:00 - 10:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_30",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 2,
+    "gold": "Monday, 12:30 - 13:00",
+    "verifier_best": "Monday, 11:30 - 12:00"
+  },
+  {
+    "task_id": "calendar_scheduling_example_44",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 2,
+    "gold": "Monday, 12:00 - 12:30",
+    "verifier_best": "Monday, 9:00 - 9:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_49",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 3,
+    "gold": "Monday, 12:00 - 12:30",
+    "verifier_best": "Monday, 10:30 - 11:00"
+  },
+  {
+    "task_id": "calendar_scheduling_example_65",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 3,
+    "gold": "Monday, 13:00 - 13:30",
+    "verifier_best": "Monday, 10:00 - 10:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_67",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 4,
+    "gold": "Monday, 13:30 - 14:00",
+    "verifier_best": "Monday, 10:30 - 11:00"
+  },
+  {
+    "task_id": "calendar_scheduling_example_74",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 2,
+    "gold": "Monday, 14:00 - 15:00",
+    "verifier_best": "Monday, 9:00 - 10:00"
+  },
+  {
+    "task_id": "calendar_scheduling_example_77",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 2,
+    "gold": "Monday, 10:30 - 11:00",
+    "verifier_best": "Monday, 9:00 - 9:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_80",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 3,
+    "gold": "Monday, 13:00 - 13:30",
+    "verifier_best": "Monday, 9:00 - 9:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_90",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 5,
+    "gold": "Monday, 13:30 - 14:00",
+    "verifier_best": "Monday, 12:30 - 13:00"
+  },
+  {
+    "task_id": "calendar_scheduling_example_98",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 3,
+    "gold": "Monday, 13:30 - 14:00",
+    "verifier_best": "Monday, 10:30 - 11:00"
+  },
+  {
+    "task_id": "calendar_scheduling_example_164",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 2,
+    "gold": "Monday, 15:00 - 15:30",
+    "verifier_best": "Monday, 11:00 - 11:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_212",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 2,
+    "gold": "Monday, 14:00 - 14:30",
+    "verifier_best": "Monday, 9:30 - 10:00"
+  },
+  {
+    "task_id": "calendar_scheduling_example_217",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 2,
+    "gold": "Monday, 11:30 - 12:00",
+    "verifier_best": "Monday, 9:00 - 9:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_220",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 2,
+    "gold": "Monday, 15:00 - 15:30",
+    "verifier_best": "Monday, 12:30 - 13:00"
+  },
+  {
+    "task_id": "calendar_scheduling_example_259",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 2,
+    "gold": "Monday, 13:00 - 13:30",
+    "verifier_best": "Monday, 11:30 - 12:00"
+  },
+  {
+    "task_id": "calendar_scheduling_example_293",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 2,
+    "gold": "Monday, 13:00 - 13:30",
+    "verifier_best": "Monday, 9:00 - 9:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_401",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 2,
+    "gold": "Monday, 13:00 - 13:30",
+    "verifier_best": "Monday, 10:30 - 11:00"
+  },
+  {
+    "task_id": "calendar_scheduling_example_416",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 2,
+    "gold": "Monday, 10:00 - 10:30",
+    "verifier_best": "Monday, 9:00 - 9:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_502",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 2,
+    "gold": "Monday, 12:00 - 12:30",
+    "verifier_best": "Monday, 9:00 - 9:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_507",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 5,
+    "gold": "Monday, 13:00 - 13:30",
+    "verifier_best": "Monday, 9:00 - 9:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_521",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 7,
+    "gold": "Monday, 14:00 - 14:30",
+    "verifier_best": "Monday, 9:00 - 9:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_525",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 5,
+    "gold": "Monday, 13:00 - 13:30",
+    "verifier_best": "Monday, 9:00 - 9:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_526",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 3,
+    "gold": "Monday, 13:30 - 14:00",
+    "verifier_best": "Monday, 10:00 - 10:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_528",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 2,
+    "gold": "Monday, 12:30 - 13:00",
+    "verifier_best": "Monday, 11:30 - 12:00"
+  },
+  {
+    "task_id": "calendar_scheduling_example_529",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 5,
+    "gold": "Monday, 14:00 - 14:30",
+    "verifier_best": "Monday, 10:00 - 10:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_532",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 2,
+    "gold": "Monday, 13:00 - 13:30",
+    "verifier_best": "Monday, 9:00 - 9:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_552",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 4,
+    "gold": "Monday, 10:30 - 11:00",
+    "verifier_best": "Monday, 9:30 - 10:00"
+  },
+  {
+    "task_id": "calendar_scheduling_example_556",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 2,
+    "gold": "Monday, 14:30 - 15:00",
+    "verifier_best": "Monday, 10:30 - 11:00"
+  },
+  {
+    "task_id": "calendar_scheduling_example_575",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 2,
+    "gold": "Monday, 12:30 - 13:00",
+    "verifier_best": "Monday, 10:00 - 10:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_576",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 2,
+    "gold": "Monday, 11:00 - 11:30",
+    "verifier_best": "Monday, 9:30 - 10:00"
+  },
+  {
+    "task_id": "calendar_scheduling_example_579",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 5,
+    "gold": "Monday, 12:30 - 13:00",
+    "verifier_best": "Monday, 9:00 - 9:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_618",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 7,
+    "gold": "Monday, 13:30 - 14:00",
+    "verifier_best": "Monday, 9:00 - 9:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_623",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 2,
+    "gold": "Monday, 15:30 - 16:00",
+    "verifier_best": "Monday, 11:30 - 12:00"
+  },
+  {
+    "task_id": "calendar_scheduling_example_630",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 6,
+    "gold": "Tuesday, 14:00 - 14:30",
+    "verifier_best": "Tuesday, 9:00 - 9:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_635",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 3,
+    "gold": "Monday, 13:00 - 13:30",
+    "verifier_best": "Monday, 9:30 - 10:00"
+  },
+  {
+    "task_id": "calendar_scheduling_example_652",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 5,
+    "gold": "Tuesday, 15:00 - 15:30",
+    "verifier_best": "Tuesday, 10:30 - 11:00"
+  },
+  {
+    "task_id": "calendar_scheduling_example_654",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 5,
+    "gold": "Monday, 14:00 - 14:30",
+    "verifier_best": "Monday, 9:00 - 9:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_657",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 3,
+    "gold": "Tuesday, 11:30 - 12:00",
+    "verifier_best": "Tuesday, 10:00 - 10:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_663",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 4,
+    "gold": "Tuesday, 11:30 - 12:00",
+    "verifier_best": "Tuesday, 9:00 - 9:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_669",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 3,
+    "gold": "Monday, 12:30 - 13:00",
+    "verifier_best": "Monday, 11:30 - 12:00"
+  },
+  {
+    "task_id": "calendar_scheduling_example_670",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 3,
+    "gold": "Monday, 12:00 - 12:30",
+    "verifier_best": "Monday, 9:00 - 9:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_683",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 2,
+    "gold": "Tuesday, 14:00 - 14:30",
+    "verifier_best": "Tuesday, 12:30 - 13:00"
+  },
+  {
+    "task_id": "calendar_scheduling_example_697",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 4,
+    "gold": "Monday, 11:30 - 12:00",
+    "verifier_best": "Monday, 10:00 - 10:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_714",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 2,
+    "gold": "Monday, 11:00 - 11:30",
+    "verifier_best": "Monday, 9:00 - 9:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_727",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 5,
+    "gold": "Tuesday, 14:00 - 14:30",
+    "verifier_best": "Tuesday, 10:00 - 10:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_733",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 3,
+    "gold": "Monday, 11:00 - 11:30",
+    "verifier_best": "Monday, 9:00 - 9:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_768",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 2,
+    "gold": "Wednesday, 10:00 - 10:30",
+    "verifier_best": "Wednesday, 9:00 - 9:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_776",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 2,
+    "gold": "Monday, 13:00 - 13:30",
+    "verifier_best": "Monday, 11:00 - 11:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_778",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 3,
+    "gold": "Monday, 15:00 - 15:30",
+    "verifier_best": "Monday, 13:00 - 13:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_789",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 5,
+    "gold": "Monday, 11:30 - 12:00",
+    "verifier_best": "Monday, 9:00 - 9:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_808",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 4,
+    "gold": "Monday, 14:00 - 14:30",
+    "verifier_best": "Monday, 9:00 - 9:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_809",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 2,
+    "gold": "Monday, 12:30 - 13:00",
+    "verifier_best": "Monday, 10:30 - 11:00"
+  },
+  {
+    "task_id": "calendar_scheduling_example_818",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 2,
+    "gold": "Tuesday, 12:30 - 13:30",
+    "verifier_best": "Tuesday, 10:30 - 11:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_833",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 3,
+    "gold": "Monday, 13:30 - 14:00",
+    "verifier_best": "Monday, 9:00 - 9:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_837",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 4,
+    "gold": "Wednesday, 12:30 - 13:00",
+    "verifier_best": "Wednesday, 10:30 - 11:00"
+  },
+  {
+    "task_id": "calendar_scheduling_example_849",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 2,
+    "gold": "Tuesday, 12:00 - 12:30",
+    "verifier_best": "Tuesday, 9:00 - 9:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_852",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 4,
+    "gold": "Wednesday, 12:00 - 12:30",
+    "verifier_best": "Wednesday, 9:00 - 9:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_868",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 7,
+    "gold": "Thursday, 13:00 - 13:30",
+    "verifier_best": "Thursday, 9:00 - 9:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_885",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 4,
+    "gold": "Monday, 13:30 - 14:30",
+    "verifier_best": "Monday, 9:00 - 10:00"
+  },
+  {
+    "task_id": "calendar_scheduling_example_890",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 2,
+    "gold": "Wednesday, 11:30 - 12:00",
+    "verifier_best": "Wednesday, 10:30 - 11:00"
+  },
+  {
+    "task_id": "calendar_scheduling_example_932",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 3,
+    "gold": "Wednesday, 12:00 - 12:30",
+    "verifier_best": "Wednesday, 9:00 - 9:30"
+  },
+  {
+    "task_id": "calendar_scheduling_example_940",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 3,
+    "gold": "Monday, 11:30 - 12:30",
+    "verifier_best": "Monday, 9:00 - 10:00"
+  },
+  {
+    "task_id": "calendar_scheduling_example_981",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 2,
+    "gold": "Wednesday, 11:30 - 12:00",
+    "verifier_best": "Wednesday, 10:30 - 11:00"
+  },
+  {
+    "task_id": "calendar_scheduling_example_982",
+    "reason": "several equally good answers; gold is not the earliest of them",
+    "n_top_slots": 2,
+    "gold": "Thursday, 13:00 - 13:30",
+    "verifier_best": "Thursday, 11:30 - 12:00"
+  }
+]
