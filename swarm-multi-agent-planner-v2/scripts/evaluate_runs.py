@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Phase 4 evaluation: derive every selection rule, then aggregate over seeds.
+"""Evaluation: derive every selection rule, then aggregate over seeds.
 
     python scripts/evaluate_runs.py                 # derives (if needed) and aggregates results/runs
     python scripts/evaluate_runs.py --no_derive     # reuse the existing derived/ folders
 
 Reads  results/runs/<config>/seed_<s>/derived/per_task.csv  (written by derive_predictions.py)
-Writes results/aggregate/phase4/
+Writes results/aggregate/main/
     table_main.csv       one row per (config, selection rule): mean exact match +- SD over seeds,
                          95% bootstrap CI over tasks, every seed's value, verified-answer rate
     per_category.csv     exact match per (config, rule, category), mean over seeds
@@ -239,7 +239,7 @@ def render_report(main_rows, cat_rows, paired_rows, runs) -> str:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--runs_root", default=str(PROJECT_ROOT / "results" / "runs"))
-    parser.add_argument("--out_dir", default=str(PROJECT_ROOT / "results" / "aggregate" / "phase4"))
+    parser.add_argument("--out_dir", default=str(PROJECT_ROOT / "results" / "aggregate" / "main"))
     parser.add_argument("--no_derive", action="store_true", help="Reuse existing derived/ folders.")
     args = parser.parse_args()
 

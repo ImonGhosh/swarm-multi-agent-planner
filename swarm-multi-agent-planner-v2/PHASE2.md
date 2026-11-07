@@ -111,7 +111,7 @@ DeepInfra was pinned: it is slightly dearer but stable, and cost is not the cons
 
 ## 4. Smoke test
 
-Dev tasks 40–45 (`data/dev_100.json`), the full 8 agents × 6 iterations, seed 0. Outputs are kept in `results/smoke_phase2/`.
+Dev tasks 40–45 (`data/dev_100.json`), the full 8 agents × 6 iterations, seed 0. Outputs are kept in `results/smoke_logging/`.
 
 | Run | Tasks | LLM calls | Cache hits | Paid | Uncached equivalent | Wall time |
 |---|---|---|---|---|---|---|

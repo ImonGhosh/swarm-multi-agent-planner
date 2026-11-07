@@ -1,16 +1,16 @@
 # Phase 4 — Main experiments
 
-**Status:** CODE DONE, LIVE RUNS NOT STARTED. All decisions D1–D8 are made (Section 3). The code, the tests (140 pass), the run scripts and the evaluation pipeline are implemented and were checked offline, including a full-budget ToT run on 20 cached dev tasks at $0 (Section 4b). **The commands, the output locations and what to expect are in [RUN_PHASE4.md](RUN_PHASE4.md).** The user runs the live steps; afterwards Phase 5 reads the logs.
+**Status:** CODE DONE, LIVE RUNS NOT STARTED. All decisions D1–D8 are made (Section 3). The code, the tests (140 pass), the run scripts and the evaluation pipeline are implemented and were checked offline, including a full-budget ToT run on 20 cached dev tasks at $0 (Section 4b). **The commands, the output locations and what to expect are in [RUN_DETAILS.md](RUN_DETAILS.md).** The user runs the live steps; afterwards Phase 5 reads the logs.
 
 ---
 
 ## 1. Resume checklist for a new session
 
-1. Read, in this order: the root `CLAUDE.md`, then `PLAN.md`, `PHASE0.md`, `PHASE1.md`, `PHASE2.md`, `PHASE3.md`, this file and [RUN_PHASE4.md](RUN_PHASE4.md).
+1. Read, in this order: the root `CLAUDE.md`, then `PLAN.md`, `PHASE0.md`, `PHASE1.md`, `PHASE2.md`, `PHASE3.md`, this file and [RUN_DETAILS.md](RUN_DETAILS.md).
 2. Work from `swarm-multi-agent-planner/swarm-multi-agent-planner-v2/`. The interpreter is `.venv/Scripts/python.exe`.
 3. Check the state: `pytest` should report **140 passed**. `.env` (git-ignored) holds `OPENROUTER_API_KEY`. The shared LLM cache is `results/cache/llm_cache.sqlite`.
 4. The user runs the large live LLM steps manually and reports back. Do not start live runs without an estimate and an explicit go-ahead (budget constraint).
-5. If the runs are finished: run `scripts/run_phase4.ps1 -Step evaluate`, read `results/aggregate/phase4/report.txt`, write the Phase 4 results into this file and PLAN.md, then start Phase 5.
+5. If the runs are finished: run `scripts/run_experiments.ps1 -Step evaluate`, read `results/aggregate/main/report.txt`, write the Phase 4 results into this file and PLAN.md, then start Phase 5.
 
 ---
 
@@ -43,7 +43,7 @@ Phase 4 table (from PLAN.md): single-SLM baseline, ToT-only, ToT+ACO (frozen v2)
 | D5 | Acceptance criterion | Both ToT modes above the baseline under the headline rule, mean over seeds. |
 | D6 | Sampling control | Best of 48 by the verifier, compared with `best_of_all` (and the headline), stated openly. |
 | D7 | Valid-answer rate | Reported as a column (`verified_answer_rate`). |
-| D8 | Git commit and tag | Yes, before the first test-set run (see RUN_PHASE4.md Section 6). |
+| D8 | Git commit and tag | Yes, before the first test-set run (see RUN_DETAILS.md Section 6). |
 
 The original option descriptions follow for the record.
 
@@ -184,8 +184,8 @@ This is for the paper (Phase 8) and for the reassessment meeting. It was written
 | All selection rules derived from the logs, with per-task tables, oracle pass@k, per-iteration verified share, early-stop budget | `derive.py`, `scripts/derive_predictions.py` |
 | Official exact match in memory (checked equal to `scripts/evaluate.py`), SD over seeds, bootstrap CI over tasks, exact McNemar | `metrics.py`, `stats.py` |
 | Aggregation: main table, per-category table, paired tests (ACO vs ToT-only for every rule; both vs baseline; both vs the sampling control) | `scripts/evaluate_runs.py` |
-| One-command driver with caps | `scripts/run_phase4.ps1` |
-| 41 new or rewritten tests (99 → 140) | `tests/test_aco.py`, `test_solver.py`, `test_selection_rules.py`, `test_metrics_and_stats.py`, `test_phase4_runs.py` |
+| One-command driver with caps | `scripts/run_experiments.ps1` |
+| 41 new or rewritten tests (99 → 140) | `tests/test_aco.py`, `test_solver.py`, `test_selection_rules.py`, `test_metrics_and_stats.py`, `test_experiment_runs.py` |
 
 `train` and the v1-rule row are gone; `scripts/run_experiment.py` no longer has `--beta` (and gained `--selection_policy`, `--max_cost_usd`). The Phase 3 simulator still accepts `beta` because it reproduces the η ablation.
 
@@ -197,9 +197,9 @@ This is for the paper (Phase 8) and for the reassessment meeting. It was written
 
 ## 4c. Still to do
 
-1. **Smoke test live** (about $0.02): `scripts/run_phase4.ps1 -Step smoke`.
-2. **The live runs** (about $30–35): see [RUN_PHASE4.md](RUN_PHASE4.md).
-3. **Evaluate**: `scripts/run_phase4.ps1 -Step evaluate`. Write the results here and in PLAN.md.
+1. **Smoke test live** (about $0.02): `scripts/run_experiments.ps1 -Step smoke`.
+2. **The live runs** (about $30–35): see [RUN_DETAILS.md](RUN_DETAILS.md).
+3. **Evaluate**: `scripts/run_experiments.ps1 -Step evaluate`. Write the results here and in PLAN.md.
 4. Hand over to Phase 5 (figures and tables from the logs).
 
 ---
@@ -219,7 +219,7 @@ This is for the paper (Phase 8) and for the reassessment meeting. It was written
 |---|---|
 | `src/swarm_planner/` | `solver.py`, `tot/` (graph, prompts, levels), `aco/`, `verifier/`, `llm/` (gateway, cache), `logging.py`, `run_io.py`, `selection_rules.py`, `baseline.py`, `derive.py`, `metrics.py`, `stats.py`, `path_table.py`, `simulate.py`, `legacy_eta.py` (Phase 3 only). |
 | `scripts/run_experiment.py` | ToT-only / ToT+ACO on a dataset (flags: `--aco`, `--seed`, `--selection_policy`, `--max_cost_usd`, `--run_dir`, `--cache_path`, `--limit`, `--task_concurrency`, `--max_concurrent_requests`). |
-| `scripts/run_baseline.py`, `run_sampling_control.py`, `run_verifier_solver.py`, `run_phase4.ps1` | The other Phase 4 rows and the driver ([RUN_PHASE4.md](RUN_PHASE4.md)). |
+| `scripts/run_baseline.py`, `run_sampling_control.py`, `run_verifier_solver.py`, `run_experiments.ps1` | The other Phase 4 rows and the driver ([RUN_DETAILS.md](RUN_DETAILS.md)). |
 | `scripts/derive_predictions.py`, `evaluate_runs.py` | Every selection rule from the logs; aggregation over seeds. |
 | `scripts/enumerate_paths.py` | Builds a path table (used for the dev set). |
 | `scripts/simulate_aco.py`, `analyze_path_table.py`, `analyze_lookahead.py`, `validate_simulator.py`, `audit_verifier.py` | Offline analyses (no LLM cost). |
