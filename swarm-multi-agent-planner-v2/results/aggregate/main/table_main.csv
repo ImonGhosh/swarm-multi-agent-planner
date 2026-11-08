@@ -1,0 +1,2 @@
+config,rule,headline,seeds,tasks,exact_match_mean,exact_match_sd,ci95_low,ci95_high,verified_answer_rate,seed_0
+verifier_solver,verifier_best_slot,1,1,400,0.9275,0.0,0.9025,0.9525,1.0,0.9275

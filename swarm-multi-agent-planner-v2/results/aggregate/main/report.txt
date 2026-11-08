@@ -1,0 +1,14 @@
+PHASE 4 RESULTS (exact match, official Natural Plan metric)
+
+Seeds per config: verifier_solver=[0]
+
+config           rule                   EM mean      SD      95% CI (tasks)  verified   per seed
+verifier_solver  verifier_best_slot      0.9275  0.0000    [0.9025, 0.9525]    1.0000   0.9275 *
+
+* headline rule / reference row. 'verified' = share of answers the verifier scores 1.0 (valid-answer rate).
+
+PAIRED COMPARISONS (A minus B; McNemar exact per seed; pooled = mean over seeds, bootstrap over tasks)
+
+PER CATEGORY (headline rules, mean over seeds)
+config / rule                               2p1d    2p2d    2p3d    2p4d    2p5d    3p1d    4p1d    5p1d    6p1d    7p1d
+verifier_solver / verifier_best_slot       0.800   0.900   0.925   0.875   0.975   0.925   1.000   0.925   1.000   0.950

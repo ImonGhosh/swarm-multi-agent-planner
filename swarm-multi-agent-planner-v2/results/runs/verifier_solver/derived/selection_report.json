@@ -1,0 +1,28 @@
+{
+  "run_dir": "C:\\IMON\\Masters\\Masters-scientific-project\\swarm-multi-agent-planner\\swarm-multi-agent-planner-v2\\results\\runs\\verifier_solver",
+  "config_name": "verifier_solver",
+  "mode": "verifier_solver",
+  "seed": null,
+  "tasks": 400,
+  "headline_rule": "verifier_best_slot",
+  "rules": {
+    "verifier_best_slot": {
+      "exact_match": 0.9275,
+      "correct": 371,
+      "verified_answer_rate": 1.0,
+      "hard_valid_rate": 1.0,
+      "per_category": {
+        "2p1d": 0.8,
+        "2p2d": 0.9,
+        "2p3d": 0.925,
+        "2p4d": 0.875,
+        "2p5d": 0.975,
+        "3p1d": 0.925,
+        "4p1d": 1.0,
+        "5p1d": 0.925,
+        "6p1d": 1.0,
+        "7p1d": 0.95
+      }
+    }
+  }
+}

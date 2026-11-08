@@ -1,0 +1,23 @@
+{
+  "mode": "baseline",
+  "config_name": "baseline",
+  "tasks": 400,
+  "seed": 1,
+  "selection_policy": "single_call",
+  "hard_valid_share": 0.295,
+  "verified_share": 0.24,
+  "llm": {
+    "llm_calls": 400,
+    "cache_hits": 0,
+    "prompt_tokens": 900936,
+    "completion_tokens": 8680,
+    "cost_usd_paid": 0.0459148,
+    "cost_usd_uncached_equivalent": 0.0459148,
+    "latency_s_paid": 4155.324
+  },
+  "cache_entries": 16221,
+  "wall_s": 557.909,
+  "out_path": "C:\\IMON\\Masters\\Masters-scientific-project\\swarm-multi-agent-planner\\swarm-multi-agent-planner-v2\\results\\runs\\baseline\\seed_1\\predictions.json",
+  "run_log_path": "C:\\IMON\\Masters\\Masters-scientific-project\\swarm-multi-agent-planner\\swarm-multi-agent-planner-v2\\results\\runs\\baseline\\seed_1\\events.jsonl.gz",
+  "run_dir": "C:\\IMON\\Masters\\Masters-scientific-project\\swarm-multi-agent-planner\\swarm-multi-agent-planner-v2\\results\\runs\\baseline\\seed_1"
+}

@@ -1,0 +1,11 @@
+config,rule,category,tasks,exact_match_mean
+verifier_solver,verifier_best_slot,2p1d,40,0.8
+verifier_solver,verifier_best_slot,2p2d,40,0.9
+verifier_solver,verifier_best_slot,2p3d,40,0.925
+verifier_solver,verifier_best_slot,2p4d,40,0.875
+verifier_solver,verifier_best_slot,2p5d,40,0.975
+verifier_solver,verifier_best_slot,3p1d,40,0.925
+verifier_solver,verifier_best_slot,4p1d,40,1.0
+verifier_solver,verifier_best_slot,5p1d,40,0.925
+verifier_solver,verifier_best_slot,6p1d,40,1.0
+verifier_solver,verifier_best_slot,7p1d,40,0.95

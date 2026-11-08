@@ -1,0 +1,29 @@
+{
+  "mode": "baseline",
+  "config_name": "baseline",
+  "model": "google/gemma-3-4b-it",
+  "seed": 1,
+  "nonce": "baseline:seed1",
+  "calls_per_task": 1,
+  "limit": null,
+  "tasks": 400,
+  "prompt": "prompt_5shot as a single user message",
+  "selection_policy": "single_call",
+  "cache_path": "C:\\IMON\\Masters\\Masters-scientific-project\\swarm-multi-agent-planner\\swarm-multi-agent-planner-v2\\results\\cache\\llm_cache.sqlite",
+  "task_concurrency": 8,
+  "max_concurrent_requests": 16,
+  "data_path": "C:\\IMON\\Masters\\Masters-scientific-project\\swarm-multi-agent-planner\\swarm-multi-agent-planner-v2\\data\\curated_400.json",
+  "data_sha256": "24a7cfa9fbb03fff25d0da37bdb6f6ba21bebac4f26b7756dcfc6592f5fba74a",
+  "llm_params": {
+    "temperature": 0.0,
+    "max_tokens": 400,
+    "top_p": 1.0
+  },
+  "provider_preferences": {
+    "allow_fallbacks": false,
+    "only": [
+      "DeepInfra"
+    ]
+  },
+  "max_cost_usd": 0.5
+}
