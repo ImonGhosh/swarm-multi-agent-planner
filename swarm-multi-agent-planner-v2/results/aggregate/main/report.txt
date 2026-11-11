@@ -1,14 +1,86 @@
 PHASE 4 RESULTS (exact match, official Natural Plan metric)
 
-Seeds per config: verifier_solver=[0]
+Seeds per config: baseline=[0, 1, 2], tot_only=[0, 1, 2], tot_aco=[0, 1, 2], verifier_solver=[0]
 
 config           rule                   EM mean      SD      95% CI (tasks)  verified   per seed
+baseline         single_call             0.2175  0.0043    [0.1783, 0.2567]    0.2425   0.2150 0.2150 0.2225 *
+tot_only         verified_last3          0.5742  0.0029    [0.5292, 0.6192]    0.6200   0.5775 0.5725 0.5725 *
+tot_only         verified_last2          0.5708  0.0058    [0.5258, 0.6150]    0.6200   0.5775 0.5675 0.5675
+tot_only         verified_vote_last3     0.5717  0.0029    [0.5267, 0.6167]    0.6200   0.5750 0.5700 0.5700
+tot_only         verified_vote_last2     0.5700  0.0043    [0.5250, 0.6150]    0.6200   0.5750 0.5675 0.5675
+tot_only         best_of_all             0.5750  0.0043    [0.5300, 0.6200]    0.6200   0.5800 0.5725 0.5725
+tot_only         best_of_last3           0.5283  0.0063    [0.4842, 0.5742]    0.5725   0.5350 0.5275 0.5225
+tot_only         best_of_last2           0.4867  0.0142    [0.4442, 0.5300]    0.5325   0.5025 0.4825 0.4750
+tot_only         last_iteration          0.3858  0.0142    [0.3467, 0.4275]    0.4308   0.3700 0.3900 0.3975
+tot_only         majority_vote           0.1300  0.0025    [0.1008, 0.1608]    0.1433   0.1300 0.1325 0.1275
+tot_only         early_stop              0.5717  0.0038    [0.5267, 0.6158]    0.6200   0.5750 0.5675 0.5725
+tot_aco          verified_last3          0.5933  0.0128    [0.5492, 0.6383]    0.6433   0.6075 0.5825 0.5900 *
+tot_aco          verified_last2          0.5950  0.0115    [0.5508, 0.6400]    0.6433   0.6075 0.5850 0.5925
+tot_aco          verified_vote_last3     0.5925  0.0198    [0.5475, 0.6375]    0.6433   0.6150 0.5775 0.5850
+tot_aco          verified_vote_last2     0.5917  0.0204    [0.5467, 0.6358]    0.6433   0.6150 0.5775 0.5825
+tot_aco          best_of_all             0.5950  0.0115    [0.5500, 0.6400]    0.6433   0.6075 0.5850 0.5925
+tot_aco          best_of_last3           0.5908  0.0144    [0.5467, 0.6350]    0.6408   0.6075 0.5825 0.5825
+tot_aco          best_of_last2           0.5900  0.0130    [0.5450, 0.6342]    0.6383   0.6050 0.5825 0.5825
+tot_aco          last_iteration          0.5800  0.0195    [0.5358, 0.6242]    0.6283   0.6025 0.5675 0.5700
+tot_aco          majority_vote           0.3767  0.0088    [0.3366, 0.4175]    0.4092   0.3850 0.3675 0.3775
+tot_aco          early_stop              0.5917  0.0166    [0.5467, 0.6358]    0.6433   0.6100 0.5775 0.5875
 verifier_solver  verifier_best_slot      0.9275  0.0000    [0.9025, 0.9525]    1.0000   0.9275 *
 
 * headline rule / reference row. 'verified' = share of answers the verifier scores 1.0 (valid-answer rate).
 
 PAIRED COMPARISONS (A minus B; McNemar exact per seed; pooled = mean over seeds, bootstrap over tasks)
+  ACO vs ToT-only [verified_last3]  seed 0: 0.6075 vs 0.5775 (+3.00 pp), only A 21, only B 9, p=0.0428
+  ACO vs ToT-only [verified_last3]  seed 1: 0.5825 vs 0.5725 (+1.00 pp), only A 20, only B 16, p=0.6177
+  ACO vs ToT-only [verified_last3]  seed 2: 0.5900 vs 0.5725 (+1.75 pp), only A 23, only B 16, p=0.3368
+    pooled: +1.92 pp  95% CI [+0.33, +3.58]
+  ACO vs ToT-only [verified_last2]  seed 0: 0.6075 vs 0.5775 (+3.00 pp), only A 21, only B 9, p=0.0428
+  ACO vs ToT-only [verified_last2]  seed 1: 0.5850 vs 0.5675 (+1.75 pp), only A 23, only B 16, p=0.3368
+  ACO vs ToT-only [verified_last2]  seed 2: 0.5925 vs 0.5675 (+2.50 pp), only A 26, only B 16, p=0.1641
+    pooled: +2.42 pp  95% CI [+0.75, +4.08]
+  ACO vs ToT-only [verified_vote_last3]  seed 0: 0.6150 vs 0.5750 (+4.00 pp), only A 24, only B 8, p=0.0070
+  ACO vs ToT-only [verified_vote_last3]  seed 1: 0.5775 vs 0.5700 (+0.75 pp), only A 21, only B 18, p=0.7493
+  ACO vs ToT-only [verified_vote_last3]  seed 2: 0.5850 vs 0.5700 (+1.50 pp), only A 25, only B 19, p=0.4514
+    pooled: +2.08 pp  95% CI [+0.42, +3.83]
+  ACO vs ToT-only [verified_vote_last2]  seed 0: 0.6150 vs 0.5750 (+4.00 pp), only A 24, only B 8, p=0.0070
+  ACO vs ToT-only [verified_vote_last2]  seed 1: 0.5775 vs 0.5675 (+1.00 pp), only A 22, only B 18, p=0.6358
+  ACO vs ToT-only [verified_vote_last2]  seed 2: 0.5825 vs 0.5675 (+1.50 pp), only A 25, only B 19, p=0.4514
+    pooled: +2.17 pp  95% CI [+0.50, +3.83]
+  ACO vs ToT-only [best_of_all]  seed 0: 0.6075 vs 0.5800 (+2.75 pp), only A 21, only B 10, p=0.0708
+  ACO vs ToT-only [best_of_all]  seed 1: 0.5850 vs 0.5725 (+1.25 pp), only A 20, only B 15, p=0.4996
+  ACO vs ToT-only [best_of_all]  seed 2: 0.5925 vs 0.5725 (+2.00 pp), only A 22, only B 14, p=0.2430
+    pooled: +2.00 pp  95% CI [+0.42, +3.67]
+  ACO vs ToT-only [best_of_last3]  seed 0: 0.6075 vs 0.5350 (+7.25 pp), only A 35, only B 6, p=0.0000
+  ACO vs ToT-only [best_of_last3]  seed 1: 0.5825 vs 0.5275 (+5.50 pp), only A 32, only B 10, p=0.0009
+  ACO vs ToT-only [best_of_last3]  seed 2: 0.5825 vs 0.5225 (+6.00 pp), only A 38, only B 14, p=0.0012
+    pooled: +6.25 pp  95% CI [+4.25, +8.25]
+  ACO vs ToT-only [best_of_last2]  seed 0: 0.6050 vs 0.5025 (+10.25 pp), only A 48, only B 7, p=0.0000
+  ACO vs ToT-only [best_of_last2]  seed 1: 0.5825 vs 0.4825 (+10.00 pp), only A 49, only B 9, p=0.0000
+  ACO vs ToT-only [best_of_last2]  seed 2: 0.5825 vs 0.4750 (+10.75 pp), only A 56, only B 13, p=0.0000
+    pooled: +10.33 pp  95% CI [+8.08, +12.67]
+  ACO vs ToT-only [last_iteration]  seed 0: 0.6025 vs 0.3700 (+23.25 pp), only A 99, only B 6, p=0.0000
+  ACO vs ToT-only [last_iteration]  seed 1: 0.5675 vs 0.3900 (+17.75 pp), only A 81, only B 10, p=0.0000
+  ACO vs ToT-only [last_iteration]  seed 2: 0.5700 vs 0.3975 (+17.25 pp), only A 79, only B 10, p=0.0000
+    pooled: +19.42 pp  95% CI [+16.42, +22.42]
+  ACO vs ToT-only [majority_vote]  seed 0: 0.3850 vs 0.1300 (+25.50 pp), only A 104, only B 2, p=0.0000
+  ACO vs ToT-only [majority_vote]  seed 1: 0.3675 vs 0.1325 (+23.50 pp), only A 95, only B 1, p=0.0000
+  ACO vs ToT-only [majority_vote]  seed 2: 0.3775 vs 0.1275 (+25.00 pp), only A 101, only B 1, p=0.0000
+    pooled: +24.67 pp  95% CI [+21.25, +28.00]
+  ACO vs ToT-only [early_stop]  seed 0: 0.6100 vs 0.5750 (+3.50 pp), only A 24, only B 10, p=0.0243
+  ACO vs ToT-only [early_stop]  seed 1: 0.5775 vs 0.5675 (+1.00 pp), only A 23, only B 19, p=0.6440
+  ACO vs ToT-only [early_stop]  seed 2: 0.5875 vs 0.5725 (+1.50 pp), only A 23, only B 17, p=0.4296
+    pooled: +2.00 pp  95% CI [+0.42, +3.67]
+  tot_only vs baseline [verified_last3]  seed 0: 0.5775 vs 0.2150 (+36.25 pp), only A 156, only B 11, p=0.0000
+  tot_only vs baseline [verified_last3]  seed 1: 0.5725 vs 0.2150 (+35.75 pp), only A 156, only B 13, p=0.0000
+  tot_only vs baseline [verified_last3]  seed 2: 0.5725 vs 0.2225 (+35.00 pp), only A 152, only B 12, p=0.0000
+    pooled: +35.67 pp  95% CI [+30.67, +40.59]
+  tot_aco vs baseline [verified_last3]  seed 0: 0.6075 vs 0.2150 (+39.25 pp), only A 167, only B 10, p=0.0000
+  tot_aco vs baseline [verified_last3]  seed 1: 0.5825 vs 0.2150 (+36.75 pp), only A 157, only B 10, p=0.0000
+  tot_aco vs baseline [verified_last3]  seed 2: 0.5900 vs 0.2225 (+36.75 pp), only A 158, only B 11, p=0.0000
+    pooled: +37.58 pp  95% CI [+32.67, +42.67]
 
 PER CATEGORY (headline rules, mean over seeds)
 config / rule                               2p1d    2p2d    2p3d    2p4d    2p5d    3p1d    4p1d    5p1d    6p1d    7p1d
+baseline / single_call                     0.400   0.225   0.142   0.075   0.025   0.175   0.217   0.250   0.317   0.350
+tot_only / verified_last3                  0.725   0.633   0.475   0.317   0.233   0.775   0.533   0.642   0.692   0.717
+tot_aco / verified_last3                   0.750   0.633   0.442   0.342   0.258   0.775   0.575   0.683   0.717   0.758
 verifier_solver / verifier_best_slot       0.800   0.900   0.925   0.875   0.975   0.925   1.000   0.925   1.000   0.950

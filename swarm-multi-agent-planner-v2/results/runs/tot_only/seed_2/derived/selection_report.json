@@ -1,0 +1,219 @@
+{
+  "run_dir": "D:\\Germany\\Documents\\Magdeburg\\Semester Documents\\Sem 4\\Project\\Natural_Planner\\swarm-multi-agent-planner-v2\\results\\runs\\tot_only\\seed_2",
+  "config_name": "tot_only",
+  "mode": "solve",
+  "seed": 2,
+  "tasks": 400,
+  "headline_rule": "verified_last3",
+  "rules": {
+    "verified_last3": {
+      "exact_match": 0.5725,
+      "correct": 229,
+      "verified_answer_rate": 0.6175,
+      "hard_valid_rate": 0.7625,
+      "per_category": {
+        "2p1d": 0.725,
+        "2p2d": 0.65,
+        "2p3d": 0.5,
+        "2p4d": 0.3,
+        "2p5d": 0.225,
+        "3p1d": 0.775,
+        "4p1d": 0.5,
+        "5p1d": 0.65,
+        "6p1d": 0.675,
+        "7p1d": 0.725
+      }
+    },
+    "verified_last2": {
+      "exact_match": 0.5675,
+      "correct": 227,
+      "verified_answer_rate": 0.6175,
+      "hard_valid_rate": 0.7625,
+      "per_category": {
+        "2p1d": 0.7,
+        "2p2d": 0.65,
+        "2p3d": 0.5,
+        "2p4d": 0.3,
+        "2p5d": 0.2,
+        "3p1d": 0.775,
+        "4p1d": 0.5,
+        "5p1d": 0.65,
+        "6p1d": 0.675,
+        "7p1d": 0.725
+      }
+    },
+    "verified_vote_last3": {
+      "exact_match": 0.57,
+      "correct": 228,
+      "verified_answer_rate": 0.6175,
+      "hard_valid_rate": 0.7625,
+      "per_category": {
+        "2p1d": 0.75,
+        "2p2d": 0.675,
+        "2p3d": 0.5,
+        "2p4d": 0.3,
+        "2p5d": 0.175,
+        "3p1d": 0.75,
+        "4p1d": 0.5,
+        "5p1d": 0.65,
+        "6p1d": 0.675,
+        "7p1d": 0.725
+      }
+    },
+    "verified_vote_last2": {
+      "exact_match": 0.5675,
+      "correct": 227,
+      "verified_answer_rate": 0.6175,
+      "hard_valid_rate": 0.7625,
+      "per_category": {
+        "2p1d": 0.725,
+        "2p2d": 0.675,
+        "2p3d": 0.5,
+        "2p4d": 0.3,
+        "2p5d": 0.175,
+        "3p1d": 0.75,
+        "4p1d": 0.5,
+        "5p1d": 0.65,
+        "6p1d": 0.675,
+        "7p1d": 0.725
+      }
+    },
+    "best_of_all": {
+      "exact_match": 0.5725,
+      "correct": 229,
+      "verified_answer_rate": 0.6175,
+      "hard_valid_rate": 0.7625,
+      "per_category": {
+        "2p1d": 0.7,
+        "2p2d": 0.65,
+        "2p3d": 0.5,
+        "2p4d": 0.3,
+        "2p5d": 0.225,
+        "3p1d": 0.8,
+        "4p1d": 0.5,
+        "5p1d": 0.65,
+        "6p1d": 0.675,
+        "7p1d": 0.725
+      }
+    },
+    "best_of_last3": {
+      "exact_match": 0.5225,
+      "correct": 209,
+      "verified_answer_rate": 0.5675,
+      "hard_valid_rate": 0.7075,
+      "per_category": {
+        "2p1d": 0.7,
+        "2p2d": 0.6,
+        "2p3d": 0.475,
+        "2p4d": 0.175,
+        "2p5d": 0.175,
+        "3p1d": 0.725,
+        "4p1d": 0.45,
+        "5p1d": 0.65,
+        "6p1d": 0.625,
+        "7p1d": 0.65
+      }
+    },
+    "best_of_last2": {
+      "exact_match": 0.475,
+      "correct": 190,
+      "verified_answer_rate": 0.5225,
+      "hard_valid_rate": 0.6675,
+      "per_category": {
+        "2p1d": 0.65,
+        "2p2d": 0.6,
+        "2p3d": 0.425,
+        "2p4d": 0.15,
+        "2p5d": 0.15,
+        "3p1d": 0.7,
+        "4p1d": 0.425,
+        "5p1d": 0.55,
+        "6p1d": 0.525,
+        "7p1d": 0.575
+      }
+    },
+    "last_iteration": {
+      "exact_match": 0.3975,
+      "correct": 159,
+      "verified_answer_rate": 0.445,
+      "hard_valid_rate": 0.5825,
+      "per_category": {
+        "2p1d": 0.6,
+        "2p2d": 0.45,
+        "2p3d": 0.35,
+        "2p4d": 0.075,
+        "2p5d": 0.1,
+        "3p1d": 0.575,
+        "4p1d": 0.35,
+        "5p1d": 0.475,
+        "6p1d": 0.475,
+        "7p1d": 0.525
+      }
+    },
+    "majority_vote": {
+      "exact_match": 0.1275,
+      "correct": 51,
+      "verified_answer_rate": 0.1375,
+      "hard_valid_rate": 0.2075,
+      "per_category": {
+        "2p1d": 0.25,
+        "2p2d": 0.15,
+        "2p3d": 0.15,
+        "2p4d": 0.05,
+        "2p5d": 0.025,
+        "3p1d": 0.125,
+        "4p1d": 0.125,
+        "5p1d": 0.05,
+        "6p1d": 0.15,
+        "7p1d": 0.2
+      }
+    },
+    "early_stop": {
+      "exact_match": 0.5725,
+      "correct": 229,
+      "verified_answer_rate": 0.6175,
+      "hard_valid_rate": 0.7625,
+      "per_category": {
+        "2p1d": 0.7,
+        "2p2d": 0.65,
+        "2p3d": 0.5,
+        "2p4d": 0.3,
+        "2p5d": 0.225,
+        "3p1d": 0.8,
+        "4p1d": 0.5,
+        "5p1d": 0.65,
+        "6p1d": 0.675,
+        "7p1d": 0.725
+      }
+    }
+  },
+  "early_stop": {
+    "mean_iterations": 3.2875,
+    "mean_traversals": 26.3,
+    "mean_llm_calls": 157.8,
+    "full_budget_iterations": 6,
+    "share_of_budget": 0.5479166666666667
+  },
+  "oracle": {
+    "pass_at_first_iteration": 0.41,
+    "pass_at_all_traces": 0.5975
+  },
+  "per_iteration": {
+    "verified_trace_share": [
+      0.1234375,
+      0.1275,
+      0.13,
+      0.1190625,
+      0.1315625,
+      0.140625
+    ],
+    "best_of_iteration_exact_match": [
+      0.4,
+      0.3775,
+      0.405,
+      0.3625,
+      0.3875,
+      0.3975
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "mode": "solve",
+  "config_name": "tot_aco",
+  "tasks": 400,
+  "agents_per_task": 8,
+  "iterations_per_task": 6,
+  "aco_enabled": true,
+  "selection_policy": "verified_last3",
+  "scoring_mode": "deterministic_task_based",
+  "seed": 2,
+  "pheromone_updates_applied": 2400,
+  "selected_verified_share": 0.6375,
+  "final_mean_quality": 0.809558327499999,
+  "llm": {
+    "llm_calls": 115200,
+    "cache_hits": 102870,
+    "prompt_tokens": 306049905,
+    "completion_tokens": 8212895,
+    "cost_usd_paid": 1.7888294,
+    "cost_usd_uncached_equivalent": 16.12378475,
+    "latency_s_paid": 9893.12
+  },
+  "cache_entries": 176394,
+  "wall_s": 633.434,
+  "out_path": "D:\\Germany\\Documents\\Magdeburg\\Semester Documents\\Sem 4\\Project\\Natural_Planner\\swarm-multi-agent-planner-v2\\results\\runs\\tot_aco\\seed_2\\predictions.json",
+  "run_log_path": "D:\\Germany\\Documents\\Magdeburg\\Semester Documents\\Sem 4\\Project\\Natural_Planner\\swarm-multi-agent-planner-v2\\results\\runs\\tot_aco\\seed_2\\events.jsonl.gz",
+  "run_dir": "D:\\Germany\\Documents\\Magdeburg\\Semester Documents\\Sem 4\\Project\\Natural_Planner\\swarm-multi-agent-planner-v2\\results\\runs\\tot_aco\\seed_2"
+}

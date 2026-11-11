@@ -1,0 +1,2402 @@
+{
+  "calendar_scheduling_example_0": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 14:30 - 15:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 12:30 - 13:30"
+  },
+  "calendar_scheduling_example_1": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 14:30 - 15:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 13:30 - 14:00"
+  },
+  "calendar_scheduling_example_2": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 14:30 - 15:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:30 - 15:00"
+  },
+  "calendar_scheduling_example_3": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 9:30 - 10:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 12:00 - 13:00"
+  },
+  "calendar_scheduling_example_4": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 10:00 - 10:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:00 - 14:30"
+  },
+  "calendar_scheduling_example_5": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 12:30 - 13:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_6": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 14:30 - 15:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:00 - 15:00"
+  },
+  "calendar_scheduling_example_7": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 12:00 - 12:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 16:30 - 17:00"
+  },
+  "calendar_scheduling_example_8": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 11:00 - 11:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_9": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 14:00 - 14:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:00 - 14:30"
+  },
+  "calendar_scheduling_example_10": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 10:00 - 10:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_11": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 15:00 - 15:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 15:00 - 15:30"
+  },
+  "calendar_scheduling_example_12": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 13:00 - 14:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 16:30 - 17:00"
+  },
+  "calendar_scheduling_example_13": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 14:00 - 14:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:00 - 14:30"
+  },
+  "calendar_scheduling_example_14": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 15:00 - 15:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 15:00 - 15:30"
+  },
+  "calendar_scheduling_example_15": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 12:30 - 13:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 12:30 - 13:00"
+  },
+  "calendar_scheduling_example_16": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 12:30 - 13:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 12:30 - 13:00"
+  },
+  "calendar_scheduling_example_17": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 12:00 - 12:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 12:30 - 13:00"
+  },
+  "calendar_scheduling_example_18": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 12:30 - 13:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 12:30 - 13:00"
+  },
+  "calendar_scheduling_example_19": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 11:30 - 12:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:30 - 12:30"
+  },
+  "calendar_scheduling_example_20": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 10:00 - 10:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_21": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 9:00 - 10:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:00 - 11:00"
+  },
+  "calendar_scheduling_example_22": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 10:30 - 11:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:30 - 11:30"
+  },
+  "calendar_scheduling_example_23": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 10:30 - 11:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:30 - 11:30"
+  },
+  "calendar_scheduling_example_24": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 9:00 - 9:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_25": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 13:30 - 14:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 12:00 - 13:00"
+  },
+  "calendar_scheduling_example_26": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 15:30 - 16:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 15:30 - 16:30"
+  },
+  "calendar_scheduling_example_27": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 9:00 - 9:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_28": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 11:00 - 11:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:30 - 15:00"
+  },
+  "calendar_scheduling_example_29": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 12:00 - 13:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 12:00 - 13:00"
+  },
+  "calendar_scheduling_example_30": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 12:30 - 13:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_31": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 16:00 - 16:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:00 - 14:30"
+  },
+  "calendar_scheduling_example_32": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 9:00 - 9:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:00 - 14:30"
+  },
+  "calendar_scheduling_example_33": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 13:30 - 14:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 13:30 - 14:00"
+  },
+  "calendar_scheduling_example_34": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 9:00 - 10:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:00 - 15:00"
+  },
+  "calendar_scheduling_example_35": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 16:30 - 17:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:30 - 15:00"
+  },
+  "calendar_scheduling_example_36": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 10:30 - 11:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 12:00"
+  },
+  "calendar_scheduling_example_37": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 10:30 - 11:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:30 - 11:00"
+  },
+  "calendar_scheduling_example_38": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 16:00 - 16:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:30 - 15:00"
+  },
+  "calendar_scheduling_example_39": {
+    "num_people": "3",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 14:00 - 14:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:00 - 14:30"
+  },
+  "calendar_scheduling_example_100": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 11:00 - 12:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 12:00"
+  },
+  "calendar_scheduling_example_101": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 12:00 - 12:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 12:30 - 13:00"
+  },
+  "calendar_scheduling_example_102": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 11:00 - 12:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 12:00"
+  },
+  "calendar_scheduling_example_103": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 16:30 - 17:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:00 - 14:30"
+  },
+  "calendar_scheduling_example_104": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 14:00 - 14:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:00 - 14:30"
+  },
+  "calendar_scheduling_example_105": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 16:00 - 16:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:00 - 14:30"
+  },
+  "calendar_scheduling_example_106": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 10:00 - 11:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:00 - 11:00"
+  },
+  "calendar_scheduling_example_107": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 16:00 - 16:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 13:00 - 13:30"
+  },
+  "calendar_scheduling_example_108": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 16:30 - 17:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:30 - 15:00"
+  },
+  "calendar_scheduling_example_109": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 9:00 - 9:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:30 - 12:00"
+  },
+  "calendar_scheduling_example_110": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 14:00 - 14:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_111": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 12:00 - 12:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:30 - 12:00"
+  },
+  "calendar_scheduling_example_112": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 12:00 - 12:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 12:00 - 12:30"
+  },
+  "calendar_scheduling_example_113": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 10:00 - 10:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 17:00 - 17:30"
+  },
+  "calendar_scheduling_example_114": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 12:00 - 13:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 12:00 - 13:00"
+  },
+  "calendar_scheduling_example_115": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 16:00 - 16:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:30 - 15:00"
+  },
+  "calendar_scheduling_example_116": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 16:00 - 16:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:30 - 15:00"
+  },
+  "calendar_scheduling_example_117": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 13:30 - 14:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:00 - 14:30"
+  },
+  "calendar_scheduling_example_118": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 15:30 - 16:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 12:30 - 13:00"
+  },
+  "calendar_scheduling_example_119": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 9:30 - 10:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 15:30 - 16:00"
+  },
+  "calendar_scheduling_example_120": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 10:30 - 11:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:30 - 11:00"
+  },
+  "calendar_scheduling_example_121": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 12:30 - 13:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 12:30 - 13:00"
+  },
+  "calendar_scheduling_example_122": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 15:00 - 15:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 15:00 - 15:30"
+  },
+  "calendar_scheduling_example_123": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 16:30 - 17:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:00 - 14:30"
+  },
+  "calendar_scheduling_example_124": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 14:30 - 15:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:30 - 15:00"
+  },
+  "calendar_scheduling_example_125": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 13:30 - 14:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 15:00 - 15:30"
+  },
+  "calendar_scheduling_example_126": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 16:00 - 16:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 13:00 - 13:30"
+  },
+  "calendar_scheduling_example_127": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 14:00 - 14:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:00 - 14:30"
+  },
+  "calendar_scheduling_example_128": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 15:30 - 16:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:00 - 14:30"
+  },
+  "calendar_scheduling_example_129": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 12:00 - 12:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:30 - 12:00"
+  },
+  "calendar_scheduling_example_130": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 9:30 - 10:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_131": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 15:30 - 16:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 15:30 - 16:30"
+  },
+  "calendar_scheduling_example_132": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 9:30 - 10:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 13:30 - 14:00"
+  },
+  "calendar_scheduling_example_133": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 13:00 - 13:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_134": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 13:00 - 13:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_135": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 12:00 - 12:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 12:00 - 12:30"
+  },
+  "calendar_scheduling_example_136": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 15:30 - 16:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_137": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 14:00 - 14:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:00 - 14:30"
+  },
+  "calendar_scheduling_example_138": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 14:00 - 14:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:00 - 14:30"
+  },
+  "calendar_scheduling_example_139": {
+    "num_people": "4",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 11:30 - 12:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:30 - 12:00"
+  },
+  "calendar_scheduling_example_200": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 15:00 - 15:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:30 - 12:00"
+  },
+  "calendar_scheduling_example_201": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 10:00 - 10:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:00 - 14:30"
+  },
+  "calendar_scheduling_example_202": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 13:30 - 14:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 13:30 - 14:00"
+  },
+  "calendar_scheduling_example_203": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 9:00 - 9:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 9:00 - 9:30"
+  },
+  "calendar_scheduling_example_204": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 13:00 - 13:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 13:00 - 13:30"
+  },
+  "calendar_scheduling_example_205": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 11:30 - 12:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:30 - 12:00"
+  },
+  "calendar_scheduling_example_206": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 15:30 - 16:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:30 - 15:00"
+  },
+  "calendar_scheduling_example_207": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 12:30 - 13:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:30 - 12:00"
+  },
+  "calendar_scheduling_example_208": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 16:30 - 17:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 16:30 - 17:00"
+  },
+  "calendar_scheduling_example_209": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 13:00 - 13:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:30 - 12:00"
+  },
+  "calendar_scheduling_example_210": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 12:30 - 13:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_211": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 10:00 - 10:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_212": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 14:00 - 14:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 12:00 - 12:30"
+  },
+  "calendar_scheduling_example_213": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 11:30 - 12:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:30 - 12:30"
+  },
+  "calendar_scheduling_example_214": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 12:30 - 13:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_215": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 11:00 - 11:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_216": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 13:00 - 13:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:30 - 15:00"
+  },
+  "calendar_scheduling_example_217": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 11:30 - 12:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:30 - 12:00"
+  },
+  "calendar_scheduling_example_218": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 9:30 - 10:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:30 - 12:00"
+  },
+  "calendar_scheduling_example_219": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 15:30 - 16:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:30 - 15:00"
+  },
+  "calendar_scheduling_example_220": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 15:00 - 15:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_221": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 13:00 - 13:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:30 - 12:00"
+  },
+  "calendar_scheduling_example_222": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 9:00 - 9:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 16:30 - 17:00"
+  },
+  "calendar_scheduling_example_223": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 11:00 - 11:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_224": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 14:30 - 15:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:30 - 15:00"
+  },
+  "calendar_scheduling_example_225": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 16:30 - 17:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 15:00 - 15:30"
+  },
+  "calendar_scheduling_example_226": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 12:30 - 13:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 12:30 - 13:00"
+  },
+  "calendar_scheduling_example_227": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 15:00 - 15:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:00 - 14:30"
+  },
+  "calendar_scheduling_example_228": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 15:00 - 15:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 16:30 - 17:00"
+  },
+  "calendar_scheduling_example_229": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 11:00 - 11:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_230": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 14:30 - 15:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:30 - 15:00"
+  },
+  "calendar_scheduling_example_231": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 10:30 - 11:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:00 - 14:30"
+  },
+  "calendar_scheduling_example_232": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 12:00 - 12:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:30 - 15:00"
+  },
+  "calendar_scheduling_example_233": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 10:00 - 10:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 13:00 - 13:30"
+  },
+  "calendar_scheduling_example_234": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 10:30 - 11:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:30 - 15:00"
+  },
+  "calendar_scheduling_example_235": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 9:00 - 10:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:30 - 15:30"
+  },
+  "calendar_scheduling_example_236": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 10:00 - 10:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:30 - 12:00"
+  },
+  "calendar_scheduling_example_237": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 16:00 - 16:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 13:00 - 13:30"
+  },
+  "calendar_scheduling_example_238": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 9:00 - 9:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 16:00 - 16:30"
+  },
+  "calendar_scheduling_example_239": {
+    "num_people": "5",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 11:00 - 11:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:30 - 12:00"
+  },
+  "calendar_scheduling_example_300": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 13:00 - 13:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_301": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 11:00 - 11:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:00 - 14:30"
+  },
+  "calendar_scheduling_example_302": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 16:00 - 16:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:00 - 14:30"
+  },
+  "calendar_scheduling_example_303": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 12:30 - 13:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:00 - 14:30"
+  },
+  "calendar_scheduling_example_304": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 11:00 - 11:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_305": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 13:00 - 13:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 15:30 - 16:00"
+  },
+  "calendar_scheduling_example_306": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 12:30 - 13:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 12:30 - 13:00"
+  },
+  "calendar_scheduling_example_307": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 12:30 - 13:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:00 - 14:30"
+  },
+  "calendar_scheduling_example_308": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 16:30 - 17:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 16:30 - 17:00"
+  },
+  "calendar_scheduling_example_309": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 16:30 - 17:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 16:30 - 17:00"
+  },
+  "calendar_scheduling_example_310": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 14:30 - 15:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_311": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 11:30 - 12:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 16:30 - 17:00"
+  },
+  "calendar_scheduling_example_312": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 13:30 - 14:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 13:30 - 14:00"
+  },
+  "calendar_scheduling_example_313": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 16:30 - 17:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 16:00 - 16:30"
+  },
+  "calendar_scheduling_example_314": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 13:00 - 13:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 17:00 - 17:30"
+  },
+  "calendar_scheduling_example_315": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 12:30 - 13:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 12:30 - 13:00"
+  },
+  "calendar_scheduling_example_316": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 14:30 - 15:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:30 - 15:00"
+  },
+  "calendar_scheduling_example_317": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 9:00 - 9:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:30 - 12:00"
+  },
+  "calendar_scheduling_example_318": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 16:00 - 16:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 16:00 - 16:30"
+  },
+  "calendar_scheduling_example_319": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 11:30 - 12:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:30 - 12:00"
+  },
+  "calendar_scheduling_example_320": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 11:00 - 11:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_321": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 13:00 - 13:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 13:00 - 13:30"
+  },
+  "calendar_scheduling_example_322": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 10:30 - 11:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:30 - 11:30"
+  },
+  "calendar_scheduling_example_323": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 16:00 - 16:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 16:30 - 17:00"
+  },
+  "calendar_scheduling_example_324": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 13:00 - 13:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:00 - 14:30"
+  },
+  "calendar_scheduling_example_325": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 10:30 - 11:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_326": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 13:00 - 13:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 16:30 - 17:00"
+  },
+  "calendar_scheduling_example_327": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 11:30 - 12:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_328": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 12:30 - 13:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 12:30 - 13:00"
+  },
+  "calendar_scheduling_example_329": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 12:00 - 12:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_330": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 13:00 - 13:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 15:00 - 15:30"
+  },
+  "calendar_scheduling_example_331": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 11:00 - 11:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_332": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 14:00 - 14:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:30 - 12:00"
+  },
+  "calendar_scheduling_example_333": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 16:00 - 16:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 16:30 - 17:00"
+  },
+  "calendar_scheduling_example_334": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 9:30 - 10:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 9:00 - 9:30"
+  },
+  "calendar_scheduling_example_335": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 16:30 - 17:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 16:00 - 16:30"
+  },
+  "calendar_scheduling_example_336": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 14:30 - 15:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:30 - 15:00"
+  },
+  "calendar_scheduling_example_337": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 9:30 - 10:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:00 - 14:30"
+  },
+  "calendar_scheduling_example_338": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 12:30 - 13:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 12:30 - 13:00"
+  },
+  "calendar_scheduling_example_339": {
+    "num_people": "6",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 11:00 - 11:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 16:00 - 16:30"
+  },
+  "calendar_scheduling_example_400": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 11:00 - 11:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_401": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 13:00 - 13:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:30 - 11:00"
+  },
+  "calendar_scheduling_example_402": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 14:30 - 15:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:30 - 15:00"
+  },
+  "calendar_scheduling_example_403": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 13:00 - 13:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 13:00 - 13:30"
+  },
+  "calendar_scheduling_example_404": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 13:00 - 14:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 12:00"
+  },
+  "calendar_scheduling_example_405": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 15:30 - 16:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_406": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 10:30 - 11:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_407": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 11:30 - 12:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:30 - 12:00"
+  },
+  "calendar_scheduling_example_408": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 13:00 - 13:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 13:00 - 13:30"
+  },
+  "calendar_scheduling_example_409": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 11:00 - 11:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_410": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 10:00 - 10:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_411": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 15:30 - 16:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_412": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 11:00 - 11:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_413": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 16:30 - 17:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 16:30 - 17:00"
+  },
+  "calendar_scheduling_example_414": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 13:30 - 14:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_415": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 10:00 - 10:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:30 - 12:00"
+  },
+  "calendar_scheduling_example_416": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 10:00 - 10:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_417": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 14:00 - 14:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:00 - 14:30"
+  },
+  "calendar_scheduling_example_418": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 15:00 - 15:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_419": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 13:30 - 14:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:30 - 12:00"
+  },
+  "calendar_scheduling_example_420": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 11:00 - 11:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:00 - 14:30"
+  },
+  "calendar_scheduling_example_421": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 11:30 - 12:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:30 - 12:00"
+  },
+  "calendar_scheduling_example_422": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 15:30 - 16:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_423": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 9:00 - 9:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 13:00 - 13:30"
+  },
+  "calendar_scheduling_example_424": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 16:00 - 16:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_425": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 10:30 - 11:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_426": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 10:30 - 11:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:30 - 11:00"
+  },
+  "calendar_scheduling_example_427": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 9:30 - 10:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_428": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 13:00 - 13:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 13:00 - 13:30"
+  },
+  "calendar_scheduling_example_429": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 13:30 - 14:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:30 - 12:00"
+  },
+  "calendar_scheduling_example_430": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 12:30 - 13:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:00 - 11:00"
+  },
+  "calendar_scheduling_example_431": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 10:30 - 11:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_432": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 14:00 - 14:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:30 - 12:00"
+  },
+  "calendar_scheduling_example_433": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 11:30 - 12:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:30 - 12:00"
+  },
+  "calendar_scheduling_example_434": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 11:30 - 12:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:30 - 12:00"
+  },
+  "calendar_scheduling_example_435": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 15:00 - 15:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:30 - 12:00"
+  },
+  "calendar_scheduling_example_436": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 9:30 - 10:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 9:30 - 10:00"
+  },
+  "calendar_scheduling_example_437": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 10:30 - 11:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:30 - 11:00"
+  },
+  "calendar_scheduling_example_438": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 14:00 - 14:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_439": {
+    "num_people": "7",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 16:30 - 17:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_500": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 14:30 - 15:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:30 - 15:00"
+  },
+  "calendar_scheduling_example_501": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 9:00 - 9:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 12:00"
+  },
+  "calendar_scheduling_example_502": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 12:00 - 12:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_503": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 11:30 - 12:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:30 - 15:30"
+  },
+  "calendar_scheduling_example_504": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 12:30 - 13:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:30 - 15:00"
+  },
+  "calendar_scheduling_example_505": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 10:30 - 11:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:30 - 11:00"
+  },
+  "calendar_scheduling_example_506": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 11:30 - 12:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:30 - 12:30"
+  },
+  "calendar_scheduling_example_507": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 13:00 - 13:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:00 - 14:30"
+  },
+  "calendar_scheduling_example_508": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 12:30 - 13:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 12:30 - 13:30"
+  },
+  "calendar_scheduling_example_509": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 9:30 - 10:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 9:30 - 10:30"
+  },
+  "calendar_scheduling_example_510": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 16:00 - 16:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 16:00 - 16:30"
+  },
+  "calendar_scheduling_example_511": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 9:30 - 10:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_512": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 16:00 - 16:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 15:00 - 15:30"
+  },
+  "calendar_scheduling_example_513": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 15:30 - 16:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 15:30 - 16:00"
+  },
+  "calendar_scheduling_example_514": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 10:30 - 11:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:30 - 11:00"
+  },
+  "calendar_scheduling_example_515": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 16:00 - 17:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 16:00 - 17:00"
+  },
+  "calendar_scheduling_example_516": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 14:30 - 15:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:30 - 15:30"
+  },
+  "calendar_scheduling_example_517": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 16:00 - 17:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:30 - 15:30"
+  },
+  "calendar_scheduling_example_518": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 10:00 - 10:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_519": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 14:00 - 15:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:00 - 15:00"
+  },
+  "calendar_scheduling_example_520": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 12:00 - 13:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 12:00 - 13:00"
+  },
+  "calendar_scheduling_example_521": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 14:00 - 14:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 9:00 - 9:30"
+  },
+  "calendar_scheduling_example_522": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 16:00 - 16:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 12:30 - 13:00"
+  },
+  "calendar_scheduling_example_523": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 10:30 - 11:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:30 - 11:00"
+  },
+  "calendar_scheduling_example_524": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 11:00 - 12:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 12:00"
+  },
+  "calendar_scheduling_example_525": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 13:00 - 13:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_526": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 13:30 - 14:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:30 - 15:00"
+  },
+  "calendar_scheduling_example_527": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 9:30 - 10:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:00 - 11:00"
+  },
+  "calendar_scheduling_example_528": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 12:30 - 13:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:30 - 12:00"
+  },
+  "calendar_scheduling_example_529": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 14:00 - 14:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:30 - 15:00"
+  },
+  "calendar_scheduling_example_530": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 10:00 - 11:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:00 - 11:00"
+  },
+  "calendar_scheduling_example_531": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 11:30 - 12:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:30 - 12:30"
+  },
+  "calendar_scheduling_example_532": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 13:00 - 13:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 9:00 - 9:30"
+  },
+  "calendar_scheduling_example_533": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 11:30 - 12:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:30 - 12:30"
+  },
+  "calendar_scheduling_example_534": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 11:30 - 12:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:30 - 12:00"
+  },
+  "calendar_scheduling_example_535": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 9:00 - 9:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 9:00 - 9:30"
+  },
+  "calendar_scheduling_example_536": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 15:00 - 15:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 15:30 - 16:30"
+  },
+  "calendar_scheduling_example_537": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 9:30 - 10:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:00 - 11:00"
+  },
+  "calendar_scheduling_example_538": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 11:30 - 12:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:30 - 12:00"
+  },
+  "calendar_scheduling_example_539": {
+    "num_people": "2",
+    "num_days": "1",
+    "golden_plan": "Here is the proposed time: Monday, 12:00 - 12:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:30 - 15:00"
+  },
+  "calendar_scheduling_example_600": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Tuesday, 9:00 - 9:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 9:00 - 9:30"
+  },
+  "calendar_scheduling_example_601": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Monday, 11:30 - 12:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:30 - 12:00"
+  },
+  "calendar_scheduling_example_602": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Tuesday, 10:30 - 11:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 12:30 - 13:00"
+  },
+  "calendar_scheduling_example_603": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Tuesday, 14:30 - 15:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 12:00"
+  },
+  "calendar_scheduling_example_604": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Tuesday, 12:30 - 13:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_605": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Monday, 10:00 - 10:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 9:00 - 9:30"
+  },
+  "calendar_scheduling_example_606": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Monday, 9:30 - 10:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 12:30 - 13:00"
+  },
+  "calendar_scheduling_example_607": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Monday, 9:30 - 10:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 14:00 - 14:30"
+  },
+  "calendar_scheduling_example_608": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Tuesday, 11:00 - 11:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_609": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Monday, 11:00 - 11:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_610": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Tuesday, 13:30 - 14:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_611": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Monday, 9:00 - 9:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 9:00 - 9:30"
+  },
+  "calendar_scheduling_example_612": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Monday, 9:00 - 9:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 9:00 - 9:30"
+  },
+  "calendar_scheduling_example_613": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Tuesday, 14:30 - 15:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 14:30 - 15:30"
+  },
+  "calendar_scheduling_example_614": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Monday, 14:00 - 14:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 12:00 - 12:30"
+  },
+  "calendar_scheduling_example_615": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Monday, 10:30 - 11:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:30 - 11:00"
+  },
+  "calendar_scheduling_example_616": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Monday, 11:00 - 11:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_617": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Monday, 15:00 - 16:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 11:30 - 12:30"
+  },
+  "calendar_scheduling_example_618": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Monday, 13:30 - 14:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 9:00 - 9:30"
+  },
+  "calendar_scheduling_example_619": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Tuesday, 9:30 - 10:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 9:30 - 10:00"
+  },
+  "calendar_scheduling_example_620": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Monday, 12:30 - 13:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 12:30 - 13:30"
+  },
+  "calendar_scheduling_example_621": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Monday, 11:00 - 12:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 12:00"
+  },
+  "calendar_scheduling_example_622": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Monday, 10:00 - 11:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:00 - 11:00"
+  },
+  "calendar_scheduling_example_623": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Monday, 15:30 - 16:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 9:00 - 9:30"
+  },
+  "calendar_scheduling_example_624": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Monday, 9:30 - 10:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:00 - 14:30"
+  },
+  "calendar_scheduling_example_625": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Tuesday, 15:30 - 16:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 9:30 - 10:00"
+  },
+  "calendar_scheduling_example_626": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Tuesday, 9:00 - 10:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 16:00 - 17:00"
+  },
+  "calendar_scheduling_example_627": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Monday, 9:00 - 9:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 9:00 - 9:30"
+  },
+  "calendar_scheduling_example_628": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Monday, 9:00 - 10:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 9:00 - 10:00"
+  },
+  "calendar_scheduling_example_629": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Tuesday, 16:30 - 17:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 12:00 - 12:30"
+  },
+  "calendar_scheduling_example_630": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Tuesday, 14:00 - 14:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 15:30 - 16:00"
+  },
+  "calendar_scheduling_example_631": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Monday, 15:00 - 16:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 15:00 - 16:00"
+  },
+  "calendar_scheduling_example_632": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Tuesday, 9:30 - 10:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 14:00 - 14:30"
+  },
+  "calendar_scheduling_example_633": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Monday, 9:00 - 10:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 9:00 - 10:00"
+  },
+  "calendar_scheduling_example_634": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Tuesday, 9:00 - 9:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 9:00 - 9:30"
+  },
+  "calendar_scheduling_example_635": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Monday, 13:00 - 13:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 9:00 - 9:30"
+  },
+  "calendar_scheduling_example_636": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Tuesday, 9:30 - 10:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 14:30 - 15:00"
+  },
+  "calendar_scheduling_example_637": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Monday, 11:30 - 12:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:30 - 12:00"
+  },
+  "calendar_scheduling_example_638": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Tuesday, 11:00 - 11:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 14:00 - 14:30"
+  },
+  "calendar_scheduling_example_639": {
+    "num_people": "2",
+    "num_days": "2",
+    "golden_plan": "Here is the proposed time: Monday, 9:00 - 10:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 9:00 - 10:00"
+  },
+  "calendar_scheduling_example_700": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Monday, 11:30 - 12:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 9:00 - 9:30"
+  },
+  "calendar_scheduling_example_701": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Tuesday, 14:30 - 15:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 9:00 - 9:30"
+  },
+  "calendar_scheduling_example_702": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Tuesday, 9:30 - 10:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 9:30 - 10:00"
+  },
+  "calendar_scheduling_example_703": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Tuesday, 9:30 - 10:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Wednesday, 9:00 - 10:00"
+  },
+  "calendar_scheduling_example_704": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Monday, 9:00 - 9:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 9:00 - 9:30"
+  },
+  "calendar_scheduling_example_705": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Monday, 13:00 - 14:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 9:00 - 10:00"
+  },
+  "calendar_scheduling_example_706": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Monday, 10:30 - 11:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 10:30 - 11:30"
+  },
+  "calendar_scheduling_example_707": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Monday, 16:00 - 16:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 11:30 - 12:00"
+  },
+  "calendar_scheduling_example_708": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Monday, 12:30 - 13:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 9:00 - 9:30"
+  },
+  "calendar_scheduling_example_709": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Tuesday, 15:00 - 16:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 9:30 - 10:30"
+  },
+  "calendar_scheduling_example_710": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Tuesday, 9:00 - 9:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 9:00 - 9:30"
+  },
+  "calendar_scheduling_example_711": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Wednesday, 9:30 - 10:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 10:00 - 11:00"
+  },
+  "calendar_scheduling_example_712": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Wednesday, 13:00 - 14:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 12:00 - 13:00"
+  },
+  "calendar_scheduling_example_713": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Monday, 9:00 - 9:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 9:00 - 9:30"
+  },
+  "calendar_scheduling_example_714": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Monday, 11:00 - 11:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Wednesday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_715": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Tuesday, 10:00 - 11:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 10:00 - 11:00"
+  },
+  "calendar_scheduling_example_716": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Tuesday, 11:30 - 12:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 11:30 - 12:00"
+  },
+  "calendar_scheduling_example_717": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Monday, 10:00 - 10:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_718": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Monday, 9:00 - 9:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 9:00 - 9:30"
+  },
+  "calendar_scheduling_example_719": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Monday, 11:00 - 12:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 9:00 - 10:00"
+  },
+  "calendar_scheduling_example_720": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Monday, 9:00 - 9:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 9:00 - 9:30"
+  },
+  "calendar_scheduling_example_721": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Wednesday, 10:30 - 11:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Wednesday, 10:30 - 11:30"
+  },
+  "calendar_scheduling_example_722": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Monday, 12:00 - 13:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Wednesday, 11:00 - 12:00"
+  },
+  "calendar_scheduling_example_723": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Monday, 12:00 - 12:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 9:00 - 9:30"
+  },
+  "calendar_scheduling_example_724": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Monday, 16:00 - 16:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 16:00 - 16:30"
+  },
+  "calendar_scheduling_example_725": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Monday, 10:00 - 10:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_726": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Tuesday, 9:00 - 9:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 9:00 - 9:30"
+  },
+  "calendar_scheduling_example_727": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Tuesday, 14:00 - 14:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_728": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Wednesday, 9:00 - 9:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Wednesday, 14:00 - 14:30"
+  },
+  "calendar_scheduling_example_729": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Tuesday, 11:30 - 12:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 11:30 - 12:30"
+  },
+  "calendar_scheduling_example_730": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Tuesday, 16:00 - 17:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 9:00 - 10:00"
+  },
+  "calendar_scheduling_example_731": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Monday, 11:00 - 12:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 11:00 - 12:00"
+  },
+  "calendar_scheduling_example_732": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Monday, 10:30 - 11:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 9:30 - 10:00"
+  },
+  "calendar_scheduling_example_733": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Monday, 11:00 - 11:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 9:30 - 10:00"
+  },
+  "calendar_scheduling_example_734": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Monday, 16:00 - 17:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 9:00 - 10:00"
+  },
+  "calendar_scheduling_example_735": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Monday, 9:30 - 10:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 9:30 - 10:00"
+  },
+  "calendar_scheduling_example_736": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Tuesday, 16:00 - 16:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 9:30 - 10:00"
+  },
+  "calendar_scheduling_example_737": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Wednesday, 14:00 - 14:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_738": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Wednesday, 14:30 - 15:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 10:30 - 11:00"
+  },
+  "calendar_scheduling_example_739": {
+    "num_people": "2",
+    "num_days": "3",
+    "golden_plan": "Here is the proposed time: Wednesday, 16:00 - 17:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Wednesday, 14:00 - 15:00"
+  },
+  "calendar_scheduling_example_800": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Tuesday, 14:30 - 15:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 14:30 - 15:00"
+  },
+  "calendar_scheduling_example_801": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Monday, 10:00 - 10:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_802": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Wednesday, 11:30 - 12:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Wednesday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_803": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Monday, 13:30 - 14:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Wednesday, 14:00 - 15:00"
+  },
+  "calendar_scheduling_example_804": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Tuesday, 11:30 - 12:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_805": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Wednesday, 11:00 - 12:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Wednesday, 11:00 - 12:00"
+  },
+  "calendar_scheduling_example_806": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Monday, 10:00 - 10:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_807": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Monday, 10:00 - 11:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Wednesday, 11:00 - 12:00"
+  },
+  "calendar_scheduling_example_808": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Monday, 14:00 - 14:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Wednesday, 14:00 - 14:30"
+  },
+  "calendar_scheduling_example_809": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Monday, 12:30 - 13:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Wednesday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_810": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Monday, 11:00 - 12:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Wednesday, 10:00 - 11:00"
+  },
+  "calendar_scheduling_example_811": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Wednesday, 10:00 - 10:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Wednesday, 14:30 - 15:00"
+  },
+  "calendar_scheduling_example_812": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Monday, 10:00 - 10:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 15:30 - 16:00"
+  },
+  "calendar_scheduling_example_813": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Monday, 10:00 - 11:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:00 - 11:00"
+  },
+  "calendar_scheduling_example_814": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Monday, 9:00 - 9:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 14:00 - 14:30"
+  },
+  "calendar_scheduling_example_815": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Monday, 9:00 - 10:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 9:00 - 10:00"
+  },
+  "calendar_scheduling_example_816": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Monday, 16:30 - 17:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 16:30 - 17:00"
+  },
+  "calendar_scheduling_example_817": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Thursday, 13:00 - 13:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 11:30 - 12:00"
+  },
+  "calendar_scheduling_example_818": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Tuesday, 12:30 - 13:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Wednesday, 14:00 - 15:00"
+  },
+  "calendar_scheduling_example_819": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Thursday, 14:30 - 15:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Thursday, 14:30 - 15:00"
+  },
+  "calendar_scheduling_example_820": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Thursday, 14:00 - 15:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Wednesday, 10:00 - 11:00"
+  },
+  "calendar_scheduling_example_821": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Monday, 16:30 - 17:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 10:30 - 11:00"
+  },
+  "calendar_scheduling_example_822": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Thursday, 12:00 - 13:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 14:00 - 15:00"
+  },
+  "calendar_scheduling_example_823": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Thursday, 12:30 - 13:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Wednesday, 10:30 - 11:30"
+  },
+  "calendar_scheduling_example_824": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Monday, 11:30 - 12:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Thursday, 9:00 - 10:00"
+  },
+  "calendar_scheduling_example_825": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Tuesday, 12:00 - 13:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 11:00 - 12:00"
+  },
+  "calendar_scheduling_example_826": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Monday, 9:30 - 10:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 9:00 - 9:30"
+  },
+  "calendar_scheduling_example_827": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Tuesday, 12:30 - 13:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 9:30 - 10:00"
+  },
+  "calendar_scheduling_example_828": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Monday, 9:30 - 10:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 11:30 - 12:00"
+  },
+  "calendar_scheduling_example_829": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Wednesday, 9:00 - 9:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_830": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Wednesday, 12:00 - 13:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 10:00 - 11:00"
+  },
+  "calendar_scheduling_example_831": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Thursday, 10:30 - 11:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_832": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Monday, 15:00 - 16:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 10:00 - 11:00"
+  },
+  "calendar_scheduling_example_833": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Monday, 13:30 - 14:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 10:30 - 11:00"
+  },
+  "calendar_scheduling_example_834": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Monday, 13:30 - 14:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 13:30 - 14:00"
+  },
+  "calendar_scheduling_example_835": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Tuesday, 9:30 - 10:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_836": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Wednesday, 15:00 - 16:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 14:00 - 15:00"
+  },
+  "calendar_scheduling_example_837": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Wednesday, 12:30 - 13:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Thursday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_838": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Wednesday, 9:30 - 10:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Wednesday, 10:30 - 11:30"
+  },
+  "calendar_scheduling_example_839": {
+    "num_people": "2",
+    "num_days": "4",
+    "golden_plan": "Here is the proposed time: Monday, 10:00 - 11:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Monday, 10:00 - 11:00"
+  },
+  "calendar_scheduling_example_900": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Monday, 9:00 - 10:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 9:00 - 10:00"
+  },
+  "calendar_scheduling_example_901": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Wednesday, 9:30 - 10:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 14:00 - 15:00"
+  },
+  "calendar_scheduling_example_902": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Tuesday, 15:30 - 16:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 9:00 - 10:00"
+  },
+  "calendar_scheduling_example_903": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Tuesday, 13:00 - 13:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 9:00 - 9:30"
+  },
+  "calendar_scheduling_example_904": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Tuesday, 14:00 - 14:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 14:30 - 15:00"
+  },
+  "calendar_scheduling_example_905": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Tuesday, 11:00 - 11:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 10:30 - 11:00"
+  },
+  "calendar_scheduling_example_906": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Monday, 9:00 - 9:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 14:30 - 15:00"
+  },
+  "calendar_scheduling_example_907": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Thursday, 9:00 - 10:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Wednesday, 10:00 - 11:00"
+  },
+  "calendar_scheduling_example_908": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Monday, 11:30 - 12:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Wednesday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_909": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Thursday, 11:30 - 12:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 9:00 - 9:30"
+  },
+  "calendar_scheduling_example_910": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Friday, 14:30 - 15:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Wednesday, 14:00 - 15:00"
+  },
+  "calendar_scheduling_example_911": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Monday, 10:00 - 10:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 9:00 - 9:30"
+  },
+  "calendar_scheduling_example_912": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Friday, 16:00 - 16:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 10:30 - 11:00"
+  },
+  "calendar_scheduling_example_913": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Thursday, 9:00 - 9:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Thursday, 10:30 - 11:00"
+  },
+  "calendar_scheduling_example_914": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Tuesday, 11:00 - 12:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 9:00 - 10:00"
+  },
+  "calendar_scheduling_example_915": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Wednesday, 10:30 - 11:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_916": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Wednesday, 9:30 - 10:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Wednesday, 9:00 - 9:30"
+  },
+  "calendar_scheduling_example_917": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Monday, 12:30 - 13:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_918": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Thursday, 9:00 - 10:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 10:00 - 11:00"
+  },
+  "calendar_scheduling_example_919": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Monday, 10:30 - 11:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 9:00 - 9:30"
+  },
+  "calendar_scheduling_example_920": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Wednesday, 13:30 - 14:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 11:00 - 12:00"
+  },
+  "calendar_scheduling_example_921": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Monday, 10:00 - 10:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_922": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Wednesday, 13:30 - 14:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 14:00 - 14:30"
+  },
+  "calendar_scheduling_example_923": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Monday, 9:30 - 10:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 9:00 - 9:30"
+  },
+  "calendar_scheduling_example_924": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Monday, 9:00 - 9:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 9:00 - 9:30"
+  },
+  "calendar_scheduling_example_925": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Tuesday, 10:00 - 10:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 14:00 - 14:30"
+  },
+  "calendar_scheduling_example_926": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Wednesday, 15:00 - 15:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 10:30 - 11:00"
+  },
+  "calendar_scheduling_example_927": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Tuesday, 13:00 - 14:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 14:00 - 15:00"
+  },
+  "calendar_scheduling_example_928": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Monday, 14:00 - 15:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 15:00 - 16:00"
+  },
+  "calendar_scheduling_example_929": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Thursday, 9:30 - 10:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Thursday, 9:00 - 9:30"
+  },
+  "calendar_scheduling_example_930": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Thursday, 9:00 - 9:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 14:30 - 15:00"
+  },
+  "calendar_scheduling_example_931": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Monday, 12:30 - 13:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 10:30 - 11:00"
+  },
+  "calendar_scheduling_example_932": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Wednesday, 12:00 - 12:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_933": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Thursday, 9:00 - 10:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 14:00 - 15:00"
+  },
+  "calendar_scheduling_example_934": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Monday, 10:00 - 11:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 11:00 - 12:00"
+  },
+  "calendar_scheduling_example_935": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Monday, 9:00 - 9:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_936": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Wednesday, 13:30 - 14:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_937": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Wednesday, 10:00 - 10:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Wednesday, 10:00 - 10:30"
+  },
+  "calendar_scheduling_example_938": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Friday, 11:00 - 11:30 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 11:00 - 11:30"
+  },
+  "calendar_scheduling_example_939": {
+    "num_people": "2",
+    "num_days": "5",
+    "golden_plan": "Here is the proposed time: Monday, 12:30 - 13:00 ",
+    "pred_5shot_pro": "Here is the proposed time: Tuesday, 9:00 - 9:30"
+  }
+}

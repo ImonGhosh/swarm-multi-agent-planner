@@ -1,0 +1,28 @@
+{
+  "run_dir": "D:\\Germany\\Documents\\Magdeburg\\Semester Documents\\Sem 4\\Project\\Natural_Planner\\swarm-multi-agent-planner-v2\\results\\runs\\baseline\\seed_1",
+  "config_name": "baseline",
+  "mode": "baseline",
+  "seed": 1,
+  "tasks": 400,
+  "headline_rule": "single_call",
+  "rules": {
+    "single_call": {
+      "exact_match": 0.215,
+      "correct": 86,
+      "verified_answer_rate": 0.24,
+      "hard_valid_rate": 0.295,
+      "per_category": {
+        "2p1d": 0.4,
+        "2p2d": 0.225,
+        "2p3d": 0.125,
+        "2p4d": 0.075,
+        "2p5d": 0.025,
+        "3p1d": 0.175,
+        "4p1d": 0.2,
+        "5p1d": 0.25,
+        "6p1d": 0.325,
+        "7p1d": 0.35
+      }
+    }
+  }
+}
