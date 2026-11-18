@@ -1,0 +1,10 @@
+config,seed,tasks,candidates_per_task,verified_share_per_candidate,tasks_with_a_verified_candidate,mean_distinct_answers_per_task,tasks_with_one_distinct_answer
+tot_only,0,400,48.0,0.12916666666666665,0.6225,7.965,0.0
+tot_only,1,400,48.0,0.12963541666666667,0.62,7.9875,0.0
+tot_only,2,400,48.0,0.12869791666666666,0.6175,8.0075,0.0
+tot_aco,0,400,48.0,0.25661458333333337,0.6575,7.565,0.0
+tot_aco,1,400,48.0,0.265625,0.635,7.4425,0.0
+tot_aco,2,400,48.0,0.2588020833333334,0.6375,7.5075,0.0
+sampling_control,0,400,48.0,0.23697916666666669,0.295,1.7125,0.535
+sampling_control,1,400,48.0,0.24208333333333332,0.32,1.775,0.505
+sampling_control,2,400,48.0,0.24,0.305,1.74,0.5175

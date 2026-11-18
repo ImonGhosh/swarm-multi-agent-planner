@@ -47,3 +47,19 @@ tot_aco vs baseline [verified_last3],0,0.6075,0.215,39.25,167,10,0.0,,
 tot_aco vs baseline [verified_last3],1,0.5825,0.215,36.75,157,10,0.0,,
 tot_aco vs baseline [verified_last3],2,0.59,0.2225,36.75,158,11,0.0,,
 tot_aco vs baseline [verified_last3],pooled,,,37.58,,,,32.67,42.67
+tot_only [best_of_all] vs sampling control [best_of_samples],0,0.58,0.2675,31.25,139,14,0.0,,
+tot_only [best_of_all] vs sampling control [best_of_samples],1,0.5725,0.285,28.75,133,18,0.0,,
+tot_only [best_of_all] vs sampling control [best_of_samples],2,0.5725,0.2775,29.5,134,16,0.0,,
+tot_only [best_of_all] vs sampling control [best_of_samples],pooled,,,29.83,,,,24.83,34.75
+tot_only [verified_last3] vs sampling control [best_of_samples],0,0.5775,0.2675,31.0,139,15,0.0,,
+tot_only [verified_last3] vs sampling control [best_of_samples],1,0.5725,0.285,28.75,134,19,0.0,,
+tot_only [verified_last3] vs sampling control [best_of_samples],2,0.5725,0.2775,29.5,135,17,0.0,,
+tot_only [verified_last3] vs sampling control [best_of_samples],pooled,,,29.75,,,,24.75,34.75
+tot_aco [best_of_all] vs sampling control [best_of_samples],0,0.6075,0.2675,34.0,149,13,0.0,,
+tot_aco [best_of_all] vs sampling control [best_of_samples],1,0.585,0.285,30.0,137,17,0.0,,
+tot_aco [best_of_all] vs sampling control [best_of_samples],2,0.5925,0.2775,31.5,141,15,0.0,,
+tot_aco [best_of_all] vs sampling control [best_of_samples],pooled,,,31.83,,,,26.75,36.83
+tot_aco [verified_last3] vs sampling control [best_of_samples],0,0.6075,0.2675,34.0,149,13,0.0,,
+tot_aco [verified_last3] vs sampling control [best_of_samples],1,0.5825,0.285,29.75,137,18,0.0,,
+tot_aco [verified_last3] vs sampling control [best_of_samples],2,0.59,0.2775,31.25,141,16,0.0,,
+tot_aco [verified_last3] vs sampling control [best_of_samples],pooled,,,31.67,,,,26.58,36.67

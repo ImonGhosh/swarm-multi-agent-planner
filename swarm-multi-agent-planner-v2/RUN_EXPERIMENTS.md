@@ -36,7 +36,7 @@ type results\aggregate\main\report.txt
 ```
 One run with the official evaluator: `.\.venv\Scripts\python.exe scripts\evaluate.py --data_path results\runs\tot_aco\seed_0\predictions.json`
 
-## 5. Optional: sampling control (not required; about $6, 30–60 min per seed)
+## 5. Sampling control (done 2026-11-15: $2.20 and about 8.5 minutes per seed; results in PHASE5.md Section 2.5)
 
 48 direct calls per task at temperature 0.7, best one picked by the verifier. Tests whether the ToT structure matters or "many samples + verifier" is enough. Run after steps 1–3, then re-run step 4.
 

@@ -1,0 +1,70 @@
+WHY DOES ACO BEAT TOT-ONLY UNDER BEST-OF-ALL?  (ToT-only = A, ToT+ACO = B; matched by task, iteration, agent)
+
+=== seed 0 ===
+tasks 400; iteration-0 paths identical in A and B for 0 tasks
+tasks with any path difference: 400
+tasks where an identical path got a different answer (LLM answer differs): 0
+divergence timing (tasks): {'diverge_at_or_before_first_verified_of_A': 249, 'diverge_but_A_never_verified': 151}
+any verified trace in 48: both 242, only A (ToT-only) 7, only B (ACO) 21
+any exact-match trace in 48 (oracle pass@48): A 0.6000, B 0.6300
+'only B' tasks: {"B's first verified trace comes at/after the first path difference": 21}
+
+=== seed 1 ===
+tasks 400; iteration-0 paths identical in A and B for 0 tasks
+tasks with any path difference: 400
+tasks where an identical path got a different answer (LLM answer differs): 0
+divergence timing (tasks): {'diverge_at_or_before_first_verified_of_A': 248, 'diverge_but_A_never_verified': 152}
+any verified trace in 48: both 233, only A (ToT-only) 15, only B (ACO) 21
+any exact-match trace in 48 (oracle pass@48): A 0.6000, B 0.6125
+'only B' tasks: {"B's first verified trace comes at/after the first path difference": 21}
+
+=== seed 2 ===
+tasks 400; iteration-0 paths identical in A and B for 0 tasks
+tasks with any path difference: 400
+tasks where an identical path got a different answer (LLM answer differs): 0
+divergence timing (tasks): {'diverge_at_or_before_first_verified_of_A': 247, 'diverge_but_A_never_verified': 153}
+any verified trace in 48: both 233, only A (ToT-only) 14, only B (ACO) 22
+any exact-match trace in 48 (oracle pass@48): A 0.5975, B 0.6150
+'only B' tasks: {"B's first verified trace comes at/after the first path difference": 22}
+
+all seeds: tasks verified only by ToT-only 36, only by ACO 64
+  sign test on these discordant tasks (null: equal chance): p = 0.0066
+
+=== DIAGNOSTICS: can the pheromone matter before a task's first verified trace? ===
+ACO, iterations before the first verified trace: 3089 checked; largest deviation of tau_after from pure evaporation 0.9*tau_before = 1.11e-16  (so the probabilities are exactly uniform there)
+
+First-success rate per iteration among tasks without a verified trace so far (3 seeds pooled):
+  it   ToT-only (at risk)    ToT+ACO (at risk)
+  0    0.410 (1200)         0.429 (1200)
+  1    0.179 ( 708)         0.171 ( 685)
+  2    0.091 ( 581)         0.123 ( 568)
+  3    0.059 ( 528)         0.066 ( 498)
+  4    0.050 ( 497)         0.043 ( 465)
+  5    0.034 ( 472)         0.038 ( 445)
+
+Cumulative share of tasks with a verified trace after iteration k (mean over 3 seeds):
+  after iteration 1: ToT-only 0.4100, ToT+ACO 0.4292, gap +1.92 pp
+  after iteration 2: ToT-only 0.5158, ToT+ACO 0.5267, gap +1.08 pp
+  after iteration 3: ToT-only 0.5600, ToT+ACO 0.5850, gap +2.50 pp
+  after iteration 4: ToT-only 0.5858, ToT+ACO 0.6125, gap +2.67 pp
+  after iteration 5: ToT-only 0.6067, ToT+ACO 0.6292, gap +2.25 pp
+  after iteration 6: ToT-only 0.6200, ToT+ACO 0.6433, gap +2.33 pp
+  (the gap exists after iteration 1, before any pheromone, and does not grow afterwards)
+
+Iteration-0 branch shares (no pheromone is possible yet), mean over levels and seeds, per branch index:
+  ToT-only: [0.3301, 0.3336, 0.3363]   (n = 9600 traces)
+  ToT+ACO: [0.3364, 0.332, 0.3316]   (n = 9600 traces)
+
+Share of iteration-0 traces that are verified:
+  ToT-only: 0.1275, 0.1244, 0.1234
+  ToT+ACO: 0.1225, 0.1316, 0.1225
+
+Seed-to-seed discordance of 'any verified trace' inside one mode (independent draws, same distribution):
+  ToT-only seeds 0 vs 1: only first 18, only second 17
+  ToT-only seeds 0 vs 2: only first 17, only second 15
+  ToT-only seeds 1 vs 2: only first 16, only second 15
+  ToT+ACO seeds 0 vs 1: only first 21, only second 12
+  ToT+ACO seeds 0 vs 2: only first 17, only second 9
+  ToT+ACO seeds 1 vs 2: only first 16, only second 17
+
+Why the two modes never share a path (even at iteration 0): ToT-only draws a branch with rng.integers(3) and ToT+ACO with rng.random() (tot/graph.py), from the same per-call seed stream. The draws are therefore independent, not coupled, so the paired McNemar test pairs tasks, not draws.

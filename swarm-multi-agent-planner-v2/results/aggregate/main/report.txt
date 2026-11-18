@@ -1,6 +1,6 @@
 PHASE 4 RESULTS (exact match, official Natural Plan metric)
 
-Seeds per config: baseline=[0, 1, 2], tot_only=[0, 1, 2], tot_aco=[0, 1, 2], verifier_solver=[0]
+Seeds per config: baseline=[0, 1, 2], tot_only=[0, 1, 2], tot_aco=[0, 1, 2], sampling_control=[0, 1, 2], verifier_solver=[0]
 
 config           rule                   EM mean      SD      95% CI (tasks)  verified   per seed
 baseline         single_call             0.2175  0.0043    [0.1783, 0.2567]    0.2425   0.2150 0.2150 0.2225 *
@@ -24,6 +24,8 @@ tot_aco          best_of_last2           0.5900  0.0130    [0.5450, 0.6342]    0
 tot_aco          last_iteration          0.5800  0.0195    [0.5358, 0.6242]    0.6283   0.6025 0.5675 0.5700
 tot_aco          majority_vote           0.3767  0.0088    [0.3366, 0.4175]    0.4092   0.3850 0.3675 0.3775
 tot_aco          early_stop              0.5917  0.0166    [0.5467, 0.6358]    0.6433   0.6100 0.5775 0.5875
+sampling_control best_of_samples         0.2767  0.0088    [0.2325, 0.3192]    0.3067   0.2675 0.2850 0.2775
+sampling_control majority_vote           0.2175  0.0025    [0.1775, 0.2575]    0.2450   0.2150 0.2175 0.2200
 verifier_solver  verifier_best_slot      0.9275  0.0000    [0.9025, 0.9525]    1.0000   0.9275 *
 
 * headline rule / reference row. 'verified' = share of answers the verifier scores 1.0 (valid-answer rate).
@@ -77,10 +79,28 @@ PAIRED COMPARISONS (A minus B; McNemar exact per seed; pooled = mean over seeds,
   tot_aco vs baseline [verified_last3]  seed 1: 0.5825 vs 0.2150 (+36.75 pp), only A 157, only B 10, p=0.0000
   tot_aco vs baseline [verified_last3]  seed 2: 0.5900 vs 0.2225 (+36.75 pp), only A 158, only B 11, p=0.0000
     pooled: +37.58 pp  95% CI [+32.67, +42.67]
+  tot_only [best_of_all] vs sampling control [best_of_samples]  seed 0: 0.5800 vs 0.2675 (+31.25 pp), only A 139, only B 14, p=0.0000
+  tot_only [best_of_all] vs sampling control [best_of_samples]  seed 1: 0.5725 vs 0.2850 (+28.75 pp), only A 133, only B 18, p=0.0000
+  tot_only [best_of_all] vs sampling control [best_of_samples]  seed 2: 0.5725 vs 0.2775 (+29.50 pp), only A 134, only B 16, p=0.0000
+    pooled: +29.83 pp  95% CI [+24.83, +34.75]
+  tot_only [verified_last3] vs sampling control [best_of_samples]  seed 0: 0.5775 vs 0.2675 (+31.00 pp), only A 139, only B 15, p=0.0000
+  tot_only [verified_last3] vs sampling control [best_of_samples]  seed 1: 0.5725 vs 0.2850 (+28.75 pp), only A 134, only B 19, p=0.0000
+  tot_only [verified_last3] vs sampling control [best_of_samples]  seed 2: 0.5725 vs 0.2775 (+29.50 pp), only A 135, only B 17, p=0.0000
+    pooled: +29.75 pp  95% CI [+24.75, +34.75]
+  tot_aco [best_of_all] vs sampling control [best_of_samples]  seed 0: 0.6075 vs 0.2675 (+34.00 pp), only A 149, only B 13, p=0.0000
+  tot_aco [best_of_all] vs sampling control [best_of_samples]  seed 1: 0.5850 vs 0.2850 (+30.00 pp), only A 137, only B 17, p=0.0000
+  tot_aco [best_of_all] vs sampling control [best_of_samples]  seed 2: 0.5925 vs 0.2775 (+31.50 pp), only A 141, only B 15, p=0.0000
+    pooled: +31.83 pp  95% CI [+26.75, +36.83]
+  tot_aco [verified_last3] vs sampling control [best_of_samples]  seed 0: 0.6075 vs 0.2675 (+34.00 pp), only A 149, only B 13, p=0.0000
+  tot_aco [verified_last3] vs sampling control [best_of_samples]  seed 1: 0.5825 vs 0.2850 (+29.75 pp), only A 137, only B 18, p=0.0000
+  tot_aco [verified_last3] vs sampling control [best_of_samples]  seed 2: 0.5900 vs 0.2775 (+31.25 pp), only A 141, only B 16, p=0.0000
+    pooled: +31.67 pp  95% CI [+26.58, +36.67]
 
 PER CATEGORY (headline rules, mean over seeds)
 config / rule                               2p1d    2p2d    2p3d    2p4d    2p5d    3p1d    4p1d    5p1d    6p1d    7p1d
 baseline / single_call                     0.400   0.225   0.142   0.075   0.025   0.175   0.217   0.250   0.317   0.350
 tot_only / verified_last3                  0.725   0.633   0.475   0.317   0.233   0.775   0.533   0.642   0.692   0.717
 tot_aco / verified_last3                   0.750   0.633   0.442   0.342   0.258   0.775   0.575   0.683   0.717   0.758
+sampling_control / best_of_samples         0.400   0.300   0.192   0.142   0.083   0.258   0.275   0.358   0.333   0.425
+sampling_control / majority_vote           0.400   0.208   0.142   0.075   0.025   0.175   0.225   0.250   0.325   0.350
 verifier_solver / verifier_best_slot       0.800   0.900   0.925   0.875   0.975   0.925   1.000   0.925   1.000   0.950

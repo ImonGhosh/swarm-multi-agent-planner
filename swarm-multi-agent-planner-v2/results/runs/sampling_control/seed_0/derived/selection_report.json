@@ -1,0 +1,50 @@
+{
+  "run_dir": "C:\\IMON\\Masters\\Masters-scientific-project\\swarm-multi-agent-planner\\swarm-multi-agent-planner-v2\\results\\runs\\sampling_control\\seed_0",
+  "config_name": "sampling_control",
+  "mode": "sampling_control",
+  "seed": 0,
+  "tasks": 400,
+  "headline_rule": "best_of_samples",
+  "rules": {
+    "best_of_samples": {
+      "exact_match": 0.2675,
+      "correct": 107,
+      "verified_answer_rate": 0.295,
+      "hard_valid_rate": 0.375,
+      "per_category": {
+        "2p1d": 0.4,
+        "2p2d": 0.3,
+        "2p3d": 0.2,
+        "2p4d": 0.15,
+        "2p5d": 0.05,
+        "3p1d": 0.25,
+        "4p1d": 0.25,
+        "5p1d": 0.35,
+        "6p1d": 0.325,
+        "7p1d": 0.4
+      }
+    },
+    "majority_vote": {
+      "exact_match": 0.215,
+      "correct": 86,
+      "verified_answer_rate": 0.2425,
+      "hard_valid_rate": 0.2975,
+      "per_category": {
+        "2p1d": 0.4,
+        "2p2d": 0.2,
+        "2p3d": 0.125,
+        "2p4d": 0.075,
+        "2p5d": 0.025,
+        "3p1d": 0.175,
+        "4p1d": 0.225,
+        "5p1d": 0.25,
+        "6p1d": 0.325,
+        "7p1d": 0.35
+      }
+    }
+  },
+  "oracle": {
+    "pass_at_all_samples": 0.2725
+  },
+  "single_sample_exact_match": 0.211875
+}

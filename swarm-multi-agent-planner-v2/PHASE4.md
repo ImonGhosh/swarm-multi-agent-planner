@@ -1,6 +1,6 @@
 # Phase 4 — Main experiments
 
-**Status:** CODE DONE, LIVE RUNS NOT STARTED. All decisions D1–D8 are made (Section 3). The code, the tests (140 pass), the run scripts and the evaluation pipeline are implemented and were checked offline, including a full-budget ToT run on 20 cached dev tasks at $0 (Section 4b). **The commands, the output locations and what to expect are in [RUN_DETAILS.md](RUN_DETAILS.md).** The user runs the live steps; afterwards Phase 5 reads the logs.
+**Status:** DONE. The live runs finished (baseline 2026-11-07, ToT-only and ToT+ACO 2026-11-08 to 11-11, sampling control 2026-11-15, 3 seeds each). Results: baseline 21.75% ± 0.4, ToT-only 57.4% ± 0.3, ToT+ACO 59.3% ± 1.3 under `verified_last3`; ACO +1.9 points [+0.3, +3.6]; sampling control (best of 48 by the verifier) 27.7% ± 0.9, so ToT-only and ToT+ACO beat it by about +30 and +32 points (p < 0.0001 per seed; $2.20 per seed, $6.61 in total); full tables in `results/aggregate/main/report.txt`; analysis in [PHASE5.md](PHASE5.md). (Original status before the runs: CODE DONE, LIVE RUNS NOT STARTED.) All decisions D1–D8 are made (Section 3). The code, the tests (140 pass), the run scripts and the evaluation pipeline are implemented and were checked offline, including a full-budget ToT run on 20 cached dev tasks at $0 (Section 4b). **The commands, the output locations and what to expect are in [RUN_DETAILS.md](RUN_DETAILS.md).** The user runs the live steps; afterwards Phase 5 reads the logs.
 
 ---
 
