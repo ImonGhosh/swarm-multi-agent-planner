@@ -6,6 +6,8 @@ traversals as the swarm (8 agents x 6 iterations = 48) but each is ONE direct ca
 the effect of the ToT structure from "many samples + verifier selection". Every sample has its own
 cache nonce, so the samples do not collapse into one cached answer.
 
+Settings can come from a YAML file: --config configs/sampling_control.yaml (flags override the file).
+
 Output: results/runs/sampling_control/seed_<seed>/ (predictions.json = best sample by the verifier,
 events.jsonl.gz with one `samples` event per task, summary.json, config.resolved.json).
 """
@@ -19,11 +21,12 @@ from dotenv import load_dotenv
 
 from run_experiment import DEFAULT_CACHE, PROJECT_ROOT
 from swarm_planner.baseline import SAMPLING_SAMPLES, SAMPLING_TEMPERATURE, run_sampling_control
+from swarm_planner.run_config import add_config_argument, parse_args_with_config
 
 
-def main() -> None:
-    load_dotenv(PROJECT_ROOT / ".env")
+def parse_args(argv=None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    add_config_argument(parser)
     parser.add_argument("--data_path", default=str(PROJECT_ROOT / "data" / "curated_400.json"))
     parser.add_argument("--run_dir", default=None, help="Default: results/runs/sampling_control/seed_<seed>.")
     parser.add_argument("--cache_path", default=str(DEFAULT_CACHE))
@@ -35,7 +38,12 @@ def main() -> None:
     parser.add_argument("--task_concurrency", type=int, default=4)
     parser.add_argument("--max_concurrent_requests", type=int, default=32)
     parser.add_argument("--max_cost_usd", type=float, default=None)
-    args = parser.parse_args()
+    return parse_args_with_config(parser, argv, PROJECT_ROOT)
+
+
+def main() -> None:
+    load_dotenv(PROJECT_ROOT / ".env")
+    args = parse_args()
 
     run_dir = args.run_dir or str(PROJECT_ROOT / "results" / "runs" / "sampling_control" / f"seed_{args.seed}")
     cache_path = None if args.cache_path.strip().lower() == "none" else args.cache_path

@@ -1,6 +1,6 @@
 # Phase 4 — Main experiments
 
-**Status:** DONE. The live runs finished (baseline 2026-11-07, ToT-only and ToT+ACO 2026-11-08 to 11-11, sampling control 2026-11-15, 3 seeds each). Results: baseline 21.75% ± 0.4, ToT-only 57.4% ± 0.3, ToT+ACO 59.3% ± 1.3 under `verified_last3`; ACO +1.9 points [+0.3, +3.6]; sampling control (best of 48 by the verifier) 27.7% ± 0.9, so ToT-only and ToT+ACO beat it by about +30 and +32 points (p < 0.0001 per seed; $2.20 per seed, $6.61 in total); full tables in `results/aggregate/main/report.txt`; analysis in [PHASE5.md](PHASE5.md). (Original status before the runs: CODE DONE, LIVE RUNS NOT STARTED.) All decisions D1–D8 are made (Section 3). The code, the tests (140 pass), the run scripts and the evaluation pipeline are implemented and were checked offline, including a full-budget ToT run on 20 cached dev tasks at $0 (Section 4b). **The commands, the output locations and what to expect are in [RUN_DETAILS.md](RUN_DETAILS.md).** The user runs the live steps; afterwards Phase 5 reads the logs.
+**Status:** DONE. The live runs finished (baseline 2026-11-07, ToT-only and ToT+ACO 2026-11-08 to 11-11, sampling control 2026-11-15, 3 seeds each). Results: baseline 21.75% ± 0.4, ToT-only 57.4% ± 0.3, ToT+ACO 59.3% ± 1.3 under `verified_last3`; ACO +1.9 points [+0.3, +3.6]; sampling control (best of 48 by the verifier) 27.7% ± 0.9, so ToT-only and ToT+ACO beat it by about +30 and +32 points (p < 0.0001 per seed; $2.20 per seed, $6.61 in total); full tables in `results/aggregate/main/report.txt`; analysis in [PHASE5.md](PHASE5.md). Measured spend about $32.1 in total (Section 4c). All decisions D1–D8 are made (Section 3). The code, the tests (now 145 pass, 140 at the freeze) and the evaluation pipeline were checked offline before the runs, including a full-budget ToT run on 20 cached dev tasks at $0 (Section 4b). **The commands, the output locations and what to expect are in [RUN_DETAILS.md](RUN_DETAILS.md).** Results of the live runs: Section 4c.
 
 ---
 
@@ -8,9 +8,9 @@
 
 1. Read, in this order: the root `CLAUDE.md`, then `PLAN.md`, `PHASE0.md`, `PHASE1.md`, `PHASE2.md`, `PHASE3.md`, this file and [RUN_DETAILS.md](RUN_DETAILS.md).
 2. Work from `swarm-multi-agent-planner/swarm-multi-agent-planner-v2/`. The interpreter is `.venv/Scripts/python.exe`.
-3. Check the state: `pytest` should report **140 passed**. `.env` (git-ignored) holds `OPENROUTER_API_KEY`. The shared LLM cache is `results/cache/llm_cache.sqlite`.
+3. Check the state: `pytest` should report **145 passed**. `.env` (git-ignored) holds `OPENROUTER_API_KEY`. The LLM cache is `results/cache/llm_cache.sqlite` (250,615 entries: dev table, baseline, sampling control and, merged in on 2026-11-18 from the other machine, the 176,394 ToT entries; Section 4c).
 4. The user runs the large live LLM steps manually and reports back. Do not start live runs without an estimate and an explicit go-ahead (budget constraint).
-5. If the runs are finished: run `scripts/run_experiments.ps1 -Step evaluate`, read `results/aggregate/main/report.txt`, write the Phase 4 results into this file and PLAN.md, then start Phase 5.
+5. All Phase 4 runs are finished and evaluated (`results/aggregate/main/report.txt`), and Phase 5 is done. Next: Phases 6–8.
 
 ---
 
@@ -38,10 +38,10 @@ Phase 4 table (from PLAN.md): single-SLM baseline, ToT-only, ToT+ACO (frozen v2)
 |---|---|---|
 | D1 | Deposit rule | **Top-only**: a trace deposits only if the verifier scores its answer 1.0. |
 | D2 | Final selection rule | **Headline `verified_last3`**: verified traces of the last 3 iterations, **earliest verified slot**; no verified trace there → best trace of the whole run. Window fixed before the test runs. Reported next to it: `verified_last2`, the true frequency vote (`verified_vote_last3/2`, ties to the earliest slot), `best_of_all`, `best_of_last3/2`, `last_iteration` (v1 rule), `majority_vote`, `early_stop`. With the earliest-slot tiebreak the headline equals best-of-last-k restricted to verified traces; the paper says so instead of calling it a vote (D2a/D2b). |
-| D3 | Budget | About $30–35 accepted, with a per-run cost cap (`--max_cost_usd`). |
-| D4 | Baseline seeds | The seed is the cache nonce (each seed is a real call). |
-| D5 | Acceptance criterion | Both ToT modes above the baseline under the headline rule, mean over seeds. |
-| D6 | Sampling control | Best of 48 by the verifier, compared with `best_of_all` (and the headline), stated openly. |
+| D3 | Budget | About $30–35 accepted, with a per-run cost cap (`--max_cost_usd`). **Actual: about $32.1** (ToT $25.38, sampling control $6.61, baseline $0.14). |
+| D4 | Baseline seeds | The seed is the cache nonce (each seed is a real call). **Result:** SD 0.43 points over the 3 seeds. |
+| D5 | Acceptance criterion | Both ToT modes above the baseline under the headline rule, mean over seeds. **Met:** 57.4% and 59.3% against 21.75% (+35.7 and +37.6 points, p < 0.0001 per seed). |
+| D6 | Sampling control | Best of 48 by the verifier, compared with `best_of_all` (and the headline), stated openly. **Result:** 27.7% ± 0.9; both ToT modes beat it by about 30 points under either rule (Section 4c). |
 | D7 | Valid-answer rate | Reported as a column (`verified_answer_rate`). |
 | D8 | Git commit and tag | Yes, before the first test-set run (see RUN_DETAILS.md Section 6). |
 
@@ -88,7 +88,7 @@ Considerations:
 - My suggestion: report best-of-all and best-of-last side by side (plus last-3 and majority vote), and name the headline explicitly. My lean for the headline is best-of-all (fair, highest accuracy, requirement met). If you want the answer to come from the deposited branches, best-of-last-2 or last-3 is the compromise, and best-of-last is the most ACO-visible but the most handicapping for ToT-only.
 - The dev numbers come from 20 tasks (10 solvable), so the intervals are wide.
 
-**Current preference of the user: the verified vote** (window to be fixed, the last 2 or 3 iterations). It meets the requirement that both modes beat the baseline, it gives ACO a small visible edge, and the answer comes from the pheromone-guided iterations. It is **not yet recorded as final**, because of the points below.
+**Current preference of the user: the verified vote** (window to be fixed, the last 2 or 3 iterations). It meets the requirement that both modes beat the baseline, it gives ACO a small visible edge, and the answer comes from the pheromone-guided iterations. *(Historical: it was not final at that point because of the points below; the decision table above records the final choice, the earliest-slot variant.)*
 
 **D2a. It is nearly the same as "best of the last k iterations".** On the dev sample the verified vote and best-of-last-k give identical accuracy (46.6 / 48.3 for k = 3), because almost every verified answer is correct. They differ only on tasks that have **several different verified answers** (F11): best-of-last-k takes the earliest slot, the vote takes the most frequent one.
 
@@ -195,12 +195,42 @@ This is for the paper (Phase 8) and for the reassessment meeting. It was written
 - **Real full-budget run at $0:** ToT-only and ToT+ACO, seeds 0–2, on the 20 dev tasks of the Phase 3 path table (every request is in the cache; run with `--max_cost_usd 0`, which guarantees no spend). 5,760 calls per run, all cache hits, 7 s per run. The derived numbers agree with the Phase 3 simulation: last-iteration selection ToT-only 40% (sim 38%), ACO 48% (sim 48%); plain majority vote 12% / 37% (sim 13% / 36%); headline 50% for both (the ceiling). The official `scripts/evaluate.py` gives the same numbers as `evaluate_runs.py`.
 - **Verifier-as-solver on the real test set:** 92.75% (371/400), identical to Phase 1. It is already stored in `results/runs/verifier_solver/`.
 
-## 4c. Still to do
+## 4c. Results of the live runs (400 test tasks, seeds 0, 1, 2; all done)
 
-1. **Smoke test live** (about $0.02): `scripts/run_experiments.ps1 -Step smoke`.
-2. **The live runs** (about $30–35): see [RUN_DETAILS.md](RUN_DETAILS.md).
-3. **Evaluate**: `scripts/run_experiments.ps1 -Step evaluate`. Write the results here and in PLAN.md.
-4. Hand over to Phase 5 (figures and tables from the logs).
+Source: `results/aggregate/main/report.txt` (also `table_main.csv`, `paired_tests.csv`, `per_category.csv`). Regenerate with `scripts/run_experiments.ps1 -Step evaluate`.
+
+| Configuration | Rule | Exact match, mean (SD over seeds) | Valid-answer rate | Seeds 0 / 1 / 2 |
+|---|---|---|---|---|
+| Single-SLM baseline | single call | **21.75%** (0.43) | 24.3% | 21.50 / 21.50 / 22.25 |
+| Sampling control (48 samples, T = 0.7) | best of 48 by verifier | 27.67% (0.88) | 30.7% | 26.75 / 28.50 / 27.75 |
+| ToT-only | `verified_last3` (headline) | **57.42%** (0.29) | 62.0% | 57.75 / 57.25 / 57.25 |
+| ToT+ACO | `verified_last3` (headline) | **59.33%** (1.28) | 64.3% | 60.75 / 58.25 / 59.00 |
+| Verifier-as-solver (reference) | best slot | 92.75% | 100% | 92.75 |
+
+**Selection rules, ToT-only / ToT+ACO** (test set; the dev simulation of D2 is in brackets):
+
+| Rule | ToT-only | ToT+ACO | ACO minus ToT-only (pooled, 95% CI) |
+|---|---|---|---|
+| `verified_last3` (headline) | 57.4 | 59.3 | +1.9 [+0.3, +3.6] (only seed 0 significant, p = 0.043) |
+| `best_of_all` | 57.5 | 59.5 | +2.0 [+0.4, +3.7] (a sampling artefact, F16, PHASE5.md Section 3) |
+| `verified_vote_last3` (true frequency vote) | 57.2 | 59.3 | +2.1 [+0.4, +3.8] |
+| `best_of_last2` | 48.7 [44.5] | 59.0 [48.1] | +10.3 [+8.1, +12.7] |
+| `last_iteration` (v1 rule) | 38.6 [38.2] | 58.0 [47.7] | +19.4 [+16.4, +22.4] |
+| `majority_vote` (no verifier at selection) | 13.0 [13.3] | 37.7 [36.3] | +24.7 [+21.3, +28.0] |
+| `early_stop` (offline) | 57.2 | 59.2 | +2.0 [+0.4, +3.7] |
+
+What the test set shows against the D2 and D5 expectations:
+- **D5 is met.** Both modes are above the baseline (+35.7 and +37.6 points). The plain majority vote still puts ToT-only (13.0%) below the baseline, as predicted, so it stays a secondary row.
+- **The tie-handling risk of D2b did not materialise.** The true frequency vote costs only −0.25 points (ToT-only) and −0.08 points (ToT+ACO) against the earliest-slot headline, not the feared 3 points.
+- **Rules that read late iterations favour ACO strongly** because ToT-only is handicapped by them (as simulated), so the paper must say that these gaps measure the selection rule, not ACO's accuracy gain.
+- **The dev simulation understated the absolute level** (dev: 46.6 / 48.3, test: 57.4 / 59.3) because 10 of the 20 dev tasks have no correct path and the dev ceiling was 50%. The ToT-only last-iteration (38.6 vs 38.2) and both majority-vote rows (13.0 / 37.7 vs 13.3 / 36.3) match the simulation closely; the ACO last-iteration and the last-2 rows are higher on test than simulated.
+- **The sampling control** (D6) reaches 27.7%, so the ToT structure, not "sampling plus verifier", carries the gain (details in PHASE5.md Section 2.5).
+
+**Run record.** Baseline 2026-11-07 (commit `4a88377`, tag `experiments-freeze`); ToT-only and ToT+ACO 2026-11-08 to 11-11 (commit `786b3b9`, on the other machine, wall time 10–43 minutes per run once the cache was warm); sampling control 2026-11-15 (commit `ec5e5d4`, `git_dirty` true, run code identical to the tag; see PHASE5.md Section 4). Caps: 12 / 3.5 / 0.5 dollars, none triggered.
+
+**Cost.** ToT-only and ToT+ACO shared one cache: its 176,394 distinct requests are worth $25.38. Without any caching each ToT run would cost about $16.1 (115,200 calls). Sampling control $2.204 per seed ($6.61), baseline $0.046 per seed ($0.14). Total about **$32.1**. (`results/aggregate/analysis/tables/cost.csv`.)
+
+**Cache (resolved 2026-11-18).** The ToT runs wrote their cache on the other machine (176,394 entries), the baseline and sampling control wrote to the cache in this folder (74,221 entries). The ToT cache was copied to `results/cache_import/` and merged into `results/cache/llm_cache.sqlite` (250,615 entries, no conflicts). A zero-cost replay of ToT-only and ToT+ACO seed 0 gave 115,200 cache hits, 0 paid calls and predictions identical to the stored runs (details: PHASE5.md Section 4). Still to do: ship the merged cache in the release archive with a checksum.
 
 ---
 

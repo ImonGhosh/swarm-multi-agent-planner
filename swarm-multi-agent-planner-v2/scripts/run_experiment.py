@@ -15,6 +15,9 @@ Everything a run produces goes into --run_dir (default results/runs/<tot_only|to
 
 LLM responses are cached in --cache_path (SQLite), so a repeated or interrupted run replays
 finished calls without API calls. Pass --cache_path none to disable the cache.
+
+Settings can come from a YAML file: --config configs/tot_aco.yaml (or tot_only.yaml). Command-line
+flags override the file, the file overrides the defaults below.
 """
 
 from __future__ import annotations
@@ -26,6 +29,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 from swarm_planner.aco import DEFAULT_ALPHA, DEFAULT_EPSILON, DEFAULT_RHO
+from swarm_planner.run_config import add_config_argument, parse_args_with_config
 from swarm_planner.selection_rules import HEADLINE_RULE, SELECTION_RULES
 from swarm_planner.solver import (
     DEFAULT_AGENTS_PER_TASK,
@@ -49,8 +53,9 @@ def str_to_bool(value: str) -> bool:
     raise argparse.ArgumentTypeError(f"Invalid boolean value: {value}")
 
 
-def parse_args() -> argparse.Namespace:
+def parse_args(argv=None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    add_config_argument(parser)
     parser.add_argument("--data_path", default=str(PROJECT_ROOT / "data" / "curated_400.json"))
     parser.add_argument(
         "--run_dir",
@@ -100,7 +105,7 @@ def parse_args() -> argparse.Namespace:
         default=None,
         help="Stop (resumably, via the cache) once this run has paid this much for provider calls.",
     )
-    return parser.parse_args()
+    return parse_args_with_config(parser, argv, PROJECT_ROOT)
 
 
 def main() -> None:

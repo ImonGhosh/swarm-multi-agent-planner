@@ -1,0 +1,12 @@
+# Equal-budget sampling control: 48 direct samples per task at temperature 0.7 with the baseline
+# prompt; the verifier picks the best one. No tree, no pheromone.
+# Script:  scripts/run_sampling_control.py --config configs/sampling_control.yaml --seed <0|1|2>
+# Values below are the ones the reported runs used (results/runs/sampling_control/seed_*/config.resolved.json).
+# The seed is left out on purpose: pass --seed on the command line.
+data_path: data/curated_400.json
+model: google/gemma-3-4b-it
+samples: 48
+temperature: 0.7
+task_concurrency: 4
+max_concurrent_requests: 32
+max_cost_usd: 3.5

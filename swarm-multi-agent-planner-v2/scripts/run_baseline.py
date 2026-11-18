@@ -5,6 +5,8 @@ By default the seed is used as a cache nonce (decision D4), so every seed makes 
 and the SD over seeds shows the provider's own noise at temperature 0. With --seed_as_nonce false
 all seeds replay one cached answer per task (SD exactly 0).
 
+Settings can come from a YAML file: --config configs/baseline.yaml (flags override the file).
+
 Output: results/runs/baseline/seed_<seed>/ (predictions.json, events.jsonl.gz, summary.json, config.resolved.json).
 """
 
@@ -18,11 +20,12 @@ from dotenv import load_dotenv
 
 from run_experiment import DEFAULT_CACHE, PROJECT_ROOT, str_to_bool  # same folder
 from swarm_planner.baseline import run_baseline
+from swarm_planner.run_config import add_config_argument, parse_args_with_config
 
 
-def main() -> None:
-    load_dotenv(PROJECT_ROOT / ".env")
+def parse_args(argv=None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    add_config_argument(parser)
     parser.add_argument("--data_path", default=str(PROJECT_ROOT / "data" / "curated_400.json"))
     parser.add_argument("--run_dir", default=None, help="Default: results/runs/baseline/seed_<seed>.")
     parser.add_argument("--cache_path", default=str(DEFAULT_CACHE))
@@ -33,7 +36,12 @@ def main() -> None:
     parser.add_argument("--task_concurrency", type=int, default=8)
     parser.add_argument("--max_concurrent_requests", type=int, default=16)
     parser.add_argument("--max_cost_usd", type=float, default=None)
-    args = parser.parse_args()
+    return parse_args_with_config(parser, argv, PROJECT_ROOT)
+
+
+def main() -> None:
+    load_dotenv(PROJECT_ROOT / ".env")
+    args = parse_args()
 
     run_dir = args.run_dir or str(PROJECT_ROOT / "results" / "runs" / "baseline" / f"seed_{args.seed}")
     cache_path = None if args.cache_path.strip().lower() == "none" else args.cache_path

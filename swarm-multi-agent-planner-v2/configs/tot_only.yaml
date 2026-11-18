@@ -1,0 +1,13 @@
+# ToT-only: 8 agents x 6 iterations, branches chosen uniformly at random, no pheromone.
+# Script:  scripts/run_experiment.py --config configs/tot_only.yaml --seed <0|1|2>
+# Values below are the ones the reported runs used (results/runs/tot_only/seed_*/config.resolved.json).
+# The seed is left out on purpose: pass --seed on the command line.
+data_path: data/curated_400.json
+model: google/gemma-3-4b-it
+aco: false
+agents_per_task: 8
+iterations_per_task: 6
+selection_policy: verified_last3   # headline rule; every other rule is derived offline from the logs
+task_concurrency: 8
+max_concurrent_requests: 32
+max_cost_usd: 12.0

@@ -1,0 +1,18 @@
+# ToT+ACO (frozen v2 method): same tree and budget as tot_only, branches chosen by pheromone.
+#   p_ij = (tau_ij + eps)^alpha / sum_k (tau_ik + eps)^alpha     (no heuristic term)
+#   tau <- (1 - rho) * tau + sum Q, deposit Q = 1 per edge only for answers the verifier scores 1.0
+# Script:  scripts/run_experiment.py --config configs/tot_aco.yaml --seed <0|1|2>
+# Values below are the ones the reported runs used (results/runs/tot_aco/seed_*/config.resolved.json).
+# The seed is left out on purpose: pass --seed on the command line.
+data_path: data/curated_400.json
+model: google/gemma-3-4b-it
+aco: true
+agents_per_task: 8
+iterations_per_task: 6
+alpha: 1.0
+epsilon: 0.001
+rho: 0.1
+selection_policy: verified_last3
+task_concurrency: 8
+max_concurrent_requests: 32
+max_cost_usd: 12.0

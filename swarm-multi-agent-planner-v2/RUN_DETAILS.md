@@ -1,14 +1,14 @@
-# Running Phase 4 — commands, outputs, what to expect
+# Running the experiments — commands, outputs, what to expect
 
-Everything below is run from the **v2 root** (`swarm-multi-agent-planner/swarm-multi-agent-planner-v2/`) in **PowerShell**. The code is implemented and tested (140 tests pass, see [PHASE4.md](PHASE4.md)). No live LLM call has been made for Phase 4 yet. You run the live steps; afterwards you tell me and we start Phase 5 from the logs.
+Everything below is run from the **v2 root** (`swarm-multi-agent-planner/swarm-multi-agent-planner-v2/`) in **PowerShell**. The code is implemented and tested (163 tests pass). **All the runs described here are finished** (results: [PHASE4.md](PHASE4.md) Section 4c, [PHASE5.md](PHASE5.md)); this file is the reference for reproducing them. Every run reads its settings from `configs\<name>.yaml` through `--config` (flags on the command line override the file; see [PHASE6.md](PHASE6.md)), and the driver prints its commands without running them when given `-DryRun`.
 
 ## 0. Before the first run
 
 1. `.env` (git-ignored) holds `OPENROUTER_API_KEY`. The provider is pinned to DeepInfra (no fallback), model `google/gemma-3-4b-it`.
-2. Check the code once: `.venv\Scripts\python.exe -m pytest -q` → **140 passed**.
+2. Check the code once: `.venv\Scripts\python.exe -m pytest -q` → **163 passed**.
 3. **Run one step at a time.** Two processes writing to the same cache file are untested.
 4. Do not delete `results\cache\llm_cache.sqlite`. It holds every finished LLM call, which makes every run resumable and makes ToT-only and ToT+ACO share identical LLM answers.
-5. Optional but recommended: tag the code before the first test-set run (decision D8, see Section 6).
+5. The code was tagged `experiments-freeze` before the first test-set run (decision D8, see Section 6).
 
 ## 1. The method that is run (frozen)
 
@@ -31,7 +31,7 @@ Everything below is run from the **v2 root** (`swarm-multi-agent-planner/swarm-m
 ```powershell
 .\scripts\run_experiments.ps1 -Step baseline
 # or one seed by hand:
-.\.venv\Scripts\python.exe scripts\run_baseline.py --seed 0 --task_concurrency 8 --max_concurrent_requests 16 --max_cost_usd 0.5
+.\.venv\Scripts\python.exe scripts\run_baseline.py --config configs\baseline.yaml --seed 0
 ```
 Output: `results\runs\baseline\seed_0\` (and `seed_1`, `seed_2`).
 
@@ -40,7 +40,7 @@ Output: `results\runs\baseline\seed_0\` (and `seed_1`, `seed_2`).
 ```powershell
 .\scripts\run_experiments.ps1 -Step tot_only
 # or one seed by hand:
-.\.venv\Scripts\python.exe scripts\run_experiment.py --aco false --seed 0 --task_concurrency 8 --max_concurrent_requests 32 --max_cost_usd 12
+.\.venv\Scripts\python.exe scripts\run_experiment.py --config configs\tot_only.yaml --seed 0
 ```
 Output: `results\runs\tot_only\seed_0\` (and `seed_1`, `seed_2`).
 
@@ -49,7 +49,7 @@ Output: `results\runs\tot_only\seed_0\` (and `seed_1`, `seed_2`).
 ```powershell
 .\scripts\run_experiments.ps1 -Step tot_aco
 # or one seed by hand:
-.\.venv\Scripts\python.exe scripts\run_experiment.py --aco true --seed 0 --task_concurrency 8 --max_concurrent_requests 32 --max_cost_usd 12
+.\.venv\Scripts\python.exe scripts\run_experiment.py --config configs\tot_aco.yaml --seed 0
 ```
 Output: `results\runs\tot_aco\seed_0\` (and `seed_1`, `seed_2`).
 
@@ -68,7 +68,7 @@ Output: `results\runs\sampling_control\seed_<s>\` and `results\runs\verifier_sol
 
 `.\scripts\run_experiments.ps1 -Step all` runs all of it in that order (it stops at the first error). I would rather run the steps one by one for the first time.
 
-**Total cost** ≈ **$30–35** (estimate extrapolated from the 20 dev tasks, so a real run can differ by some tens of percent). The caps are *per run*: `-TotCap 12`, `-SamplingCap 3.5`, `-BaselineCap 0.5` (change with e.g. `-TotCap 15`). **Time:** the first fresh ToT run is the slow one. My estimate is 1–3 hours (about 10 parallel calls at 2.7 s per call were measured on dev; `--task_concurrency 8 --max_concurrent_requests 32` should be faster, but rate limits at 400 tasks are untested). Later runs reuse the cache and are faster.
+**Total cost** ≈ **$30–35** (estimate extrapolated from the 20 dev tasks, so a real run can differ by some tens of percent). The caps are *per run* and live in the configs (`max_cost_usd`: 12 for ToT, 3.5 for the sampling control, 0.5 for the baseline); override one with e.g. `-TotCap 15` (bash: `TOT_CAP=15`), or with `--max_cost_usd` on a single script call. **Time:** the first fresh ToT run is the slow one. My estimate is 1–3 hours (about 10 parallel calls at 2.7 s per call were measured on dev; `--task_concurrency 8 --max_concurrent_requests 32` should be faster, but rate limits at 400 tasks are untested). Later runs reuse the cache and are faster.
 
 ## 3. Smoke test (do this first)
 
@@ -91,7 +91,7 @@ A progress line is printed after each task:
 - `(hits n)` are calls answered from the cache (free).
 - **Stopped or crashed?** (cost cap, Ctrl+C, network, rate limit, power.) Run the **same command again**. Finished calls are in the cache, so the run replays them in minutes and continues. `predictions.json` and `summary.json` are only written when a run completes; the log (`events.jsonl.gz`) is flushed after every task, so partial progress is never lost.
 - **Many 429 / rate-limit messages?** The client backs off and retries by itself. If it is slow or fails repeatedly, lower the load: `--task_concurrency 4 --max_concurrent_requests 16`. This changes speed only, never the results.
-- To cap total spend differently for one run, pass `--max_cost_usd <dollars>` to the script.
+- To cap total spend differently for one run, pass `--max_cost_usd <dollars>` to the script (it overrides the config).
 
 ## 5. Where everything is stored
 
@@ -130,6 +130,4 @@ Per-rule scores with the **official** evaluator, if you want to check one by han
 ```
 **Acceptance check (D5):** `tot_only` and `tot_aco` must score above `baseline` under the headline rule `verified_last3` (mean over seeds). The expectation from the dev simulation is about 47–48 % against a baseline of about 25 %, but that is an expectation; report whatever comes out.
 
-**What to send me for Phase 5:** just say the runs are done. The `results\runs\...` folders and `results\aggregate\main\` are all I need; I read the logs from disk. If a run failed, paste the last 10 lines of the console.
-
-**Code freeze (D8).** The code is committed and tagged `experiments-freeze` in the repository root `swarm-multi-agent-planner/` (branch `project-refinement-v1`, local only, nothing pushed). Every run log records the git commit and `git_dirty` (true only if a tracked file was modified), so a run with `git_dirty: false` and this commit is reproducible from the tag. **Do not edit code between the tag and the last run.** If something must change, tell me, and we re-tag and say so in the paper. The cache, `.env`, the virtual environment and `resultsuns` are not part of the commit.
+**Code freeze (D8).** *(History: the rule before the runs.)* The code is committed and tagged `experiments-freeze` in the repository root `swarm-multi-agent-planner/` (branch `project-refinement-v1`, local only, nothing pushed). Every run log records the git commit and `git_dirty` (true only if a tracked file was modified), so a run with `git_dirty: false` and this commit is reproducible from the tag. **Do not edit code between the tag and the last run.** If something must change, re-tag and say so in the paper. After the runs, `--config` support, the analysis code and the release tools were added; the run code itself is unchanged (PHASE6.md Section 4). The cache, `.env`, the virtual environment and `results/runs` are not part of the commit.

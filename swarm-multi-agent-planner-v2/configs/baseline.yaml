@@ -1,0 +1,11 @@
+# Single-SLM baseline: ONE call per task with the 5-shot prompt, temperature 0. No ToT, no ACO.
+# Script:  scripts/run_baseline.py --config configs/baseline.yaml --seed <0|1|2>
+# The seed is used as a cache nonce, so every seed makes real provider calls (decision D4).
+# Values below are the ones the reported runs used (results/runs/baseline/seed_*/config.resolved.json).
+# The seed is left out on purpose: pass --seed on the command line.
+data_path: data/curated_400.json
+model: google/gemma-3-4b-it
+seed_as_nonce: true
+task_concurrency: 8
+max_concurrent_requests: 16
+max_cost_usd: 0.5        # per-run cap on what the run may PAY the provider (cache hits are free)

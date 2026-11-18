@@ -9,5 +9,6 @@ dist/
 
 # LLM response cache (large; published as a release archive, see PLAN.md Phase 6)
 results/cache/
+results/cache_import/
 *.sqlite-wal
 *.sqlite-shm

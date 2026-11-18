@@ -1,31 +1,34 @@
 # Running the experiments (compact)
 
-Run everything from `swarm-multi-agent-planner-v2/` in PowerShell, **one command at a time**. Wait for `Run directory: ...` before the next one. Model: `google/gemma-3-4b-it` (default). Test set: `data\curated_400.json`. Budget: 8 agents × 6 iterations (same as v1), seeds 0, 1, 2. More detail: [RUN_DETAILS.md](RUN_DETAILS.md).
+Run everything from `swarm-multi-agent-planner-v2/` in PowerShell, **one command at a time**. Wait for `Run directory: ...` before the next one. All four live runs are finished (the commands below reproduce them); every run reads its settings from `configs\<name>.yaml` (`--config`), so the model (`google/gemma-3-4b-it`), test set (`data\curated_400.json`), budget (8 agents × 6 iterations) and per-run cost cap are in those files, and a flag on the command line overrides the file. Seeds 0, 1, 2. More detail: [RUN_DETAILS.md](RUN_DETAILS.md); how `--config` works: [PHASE6.md](PHASE6.md).
 
-Before the first run: `.env` holds `OPENROUTER_API_KEY`; `.\.venv\Scripts\python.exe -m pytest -q` shows 140 passed; optional smoke test `.\scripts\run_experiments.ps1 -Step smoke` (about $0.02, writes to `results\smoke_test\`).
+All steps in one go, or with the bash twin: `.\scripts
+un_experiments.ps1 -Step all` (add `-DryRun` to only print the commands), `SEEDS="0 1 2" scripts/run_all.sh all`.
+
+Before the first run: `.env` holds `OPENROUTER_API_KEY`; `.\.venv\Scripts\python.exe -m pytest -q` shows 163 passed; optional smoke test `.\scripts\run_experiments.ps1 -Step smoke` (about $0.02, writes to `results\smoke_test\`).
 
 ## 1. Baseline (1 call per task) — about $0.15
 
 ```powershell
-.\.venv\Scripts\python.exe scripts\run_baseline.py --seed 0 --task_concurrency 8 --max_concurrent_requests 16 --max_cost_usd 0.5
-.\.venv\Scripts\python.exe scripts\run_baseline.py --seed 1 --task_concurrency 8 --max_concurrent_requests 16 --max_cost_usd 0.5
-.\.venv\Scripts\python.exe scripts\run_baseline.py --seed 2 --task_concurrency 8 --max_concurrent_requests 16 --max_cost_usd 0.5
+.\.venv\Scripts\python.exe scripts\run_baseline.py --config configs\baseline.yaml --seed 0
+.\.venv\Scripts\python.exe scripts\run_baseline.py --config configs\baseline.yaml --seed 1
+.\.venv\Scripts\python.exe scripts\run_baseline.py --config configs\baseline.yaml --seed 2
 ```
 
 ## 2. ToT-only — first run about $9, all six ToT runs about $25 together (run this before ToT+ACO)
 
 ```powershell
-.\.venv\Scripts\python.exe scripts\run_experiment.py --aco false --agents_per_task 8 --iterations_per_task 6 --seed 0 --task_concurrency 8 --max_concurrent_requests 32 --max_cost_usd 12
-.\.venv\Scripts\python.exe scripts\run_experiment.py --aco false --agents_per_task 8 --iterations_per_task 6 --seed 1 --task_concurrency 8 --max_concurrent_requests 32 --max_cost_usd 12
-.\.venv\Scripts\python.exe scripts\run_experiment.py --aco false --agents_per_task 8 --iterations_per_task 6 --seed 2 --task_concurrency 8 --max_concurrent_requests 32 --max_cost_usd 12
+.\.venv\Scripts\python.exe scripts\run_experiment.py --config configs\tot_only.yaml --seed 0
+.\.venv\Scripts\python.exe scripts\run_experiment.py --config configs\tot_only.yaml --seed 1
+.\.venv\Scripts\python.exe scripts\run_experiment.py --config configs\tot_only.yaml --seed 2
 ```
 
 ## 3. ToT+ACO — reuses the cache of step 2, so it costs less
 
 ```powershell
-.\.venv\Scripts\python.exe scripts\run_experiment.py --aco true --agents_per_task 8 --iterations_per_task 6 --seed 0 --task_concurrency 8 --max_concurrent_requests 32 --max_cost_usd 12
-.\.venv\Scripts\python.exe scripts\run_experiment.py --aco true --agents_per_task 8 --iterations_per_task 6 --seed 1 --task_concurrency 8 --max_concurrent_requests 32 --max_cost_usd 12
-.\.venv\Scripts\python.exe scripts\run_experiment.py --aco true --agents_per_task 8 --iterations_per_task 6 --seed 2 --task_concurrency 8 --max_concurrent_requests 32 --max_cost_usd 12
+.\.venv\Scripts\python.exe scripts\run_experiment.py --config configs\tot_aco.yaml --seed 0
+.\.venv\Scripts\python.exe scripts\run_experiment.py --config configs\tot_aco.yaml --seed 1
+.\.venv\Scripts\python.exe scripts\run_experiment.py --config configs\tot_aco.yaml --seed 2
 ```
 
 ## 4. Evaluate (free)
@@ -41,9 +44,9 @@ One run with the official evaluator: `.\.venv\Scripts\python.exe scripts\evaluat
 48 direct calls per task at temperature 0.7, best one picked by the verifier. Tests whether the ToT structure matters or "many samples + verifier" is enough. Run after steps 1–3, then re-run step 4.
 
 ```powershell
-.\.venv\Scripts\python.exe scripts\run_sampling_control.py --seed 0 --task_concurrency 4 --max_concurrent_requests 32 --max_cost_usd 3.5
-.\.venv\Scripts\python.exe scripts\run_sampling_control.py --seed 1 --task_concurrency 4 --max_concurrent_requests 32 --max_cost_usd 3.5
-.\.venv\Scripts\python.exe scripts\run_sampling_control.py --seed 2 --task_concurrency 4 --max_concurrent_requests 32 --max_cost_usd 3.5
+.\.venv\Scripts\python.exe scripts\run_sampling_control.py --config configs\sampling_control.yaml --seed 0
+.\.venv\Scripts\python.exe scripts\run_sampling_control.py --config configs\sampling_control.yaml --seed 1
+.\.venv\Scripts\python.exe scripts\run_sampling_control.py --config configs\sampling_control.yaml --seed 2
 ```
 
 ## Cost estimate (3 modes × 3 seeds)
@@ -60,7 +63,7 @@ Prices (DeepInfra via OpenRouter): $0.05 per million input tokens, $0.10 per mil
 | Optional smoke test | 2 dev tasks | about $0.02 |
 | Optional sampling control | 3 × 19,200 calls | about $6 more |
 
-- **Hard caps** (`--max_cost_usd`): a run stops once it has paid 12 dollars (ToT) or 0.5 dollars (baseline). The cap applies *per run*, so the theoretical maximum is higher than the estimate, but each cap is well above the expected cost of its run (about $9 for a fresh ToT run, about $0.05 for a baseline seed).
+- **Hard caps** (`max_cost_usd` in the config, or `--max_cost_usd` on the command line): a run stops once it has paid 12 dollars (ToT) or 0.5 dollars (baseline). The cap applies *per run*, so the theoretical maximum is higher than the estimate, but each cap is well above the expected cost of its run (about $9 for a fresh ToT run, about $0.05 for a baseline seed).
 - **Cache hits are free.** Re-running a command after a stop costs almost nothing, so an interrupted run does not pay twice.
 - **Check what you actually spent:** the progress line shows `paid $x/$cap` while a run is going. At the end, `results\runs\<config>\seed_<s>\summary.json` has `llm.cost_usd_paid` (paid) and `llm.cost_usd_uncached_equivalent` (what it would have cost without the cache).
 - **Order matters for who pays:** whichever ToT run goes first pays for the shared calls, so ToT-only seed 0 is the most expensive run and the later ones are cheaper. This is why the step order is baseline, ToT-only, then ToT+ACO.
@@ -83,7 +86,7 @@ results/cache/llm_cache.sqlite  every LLM call (do not delete; ship with the res
 ## If something goes wrong
 
 - **A run stops** (cost cap, crash, rate limit, Ctrl+C): run the **same command again**. Finished calls are in the cache, so it resumes quickly.
-- **Many rate-limit messages or very slow:** use `--task_concurrency 4 --max_concurrent_requests 16`. This changes speed only, not results.
-- **Cost cap hit** (`CostCapExceeded`): raise `--max_cost_usd` and re-run the same command.
-- **Do not** run two commands at the same time (one process on the cache file), and do not edit code between the `experiments-freeze` tag and the last run.
+- **Many rate-limit messages or very slow:** add `--task_concurrency 4 --max_concurrent_requests 16` (they override the config). This changes speed only, not results.
+- **Cost cap hit** (`CostCapExceeded`): raise the cap (`--max_cost_usd <dollars>` after the `--config` flag, or the value in the config) and re-run the same command.
+- **Do not** run two commands at the same time (one process on the cache file), and do not edit code between a tag and the last run that is meant to carry it (PHASE6.md Section 4 lists what changed after `experiments-freeze`).
 - **Seeds:** at temperature 0 with the cache, ToT seeds vary only the branch choices, not the model's own noise. Baseline seeds are real separate calls.

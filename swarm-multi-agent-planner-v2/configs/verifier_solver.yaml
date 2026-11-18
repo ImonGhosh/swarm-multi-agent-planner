@@ -1,0 +1,3 @@
+# Reference row: answer every task with the verifier's own best slot. No LLM calls, no cost.
+# Script:  scripts/run_verifier_solver.py --config configs/verifier_solver.yaml
+data_path: data/curated_400.json
